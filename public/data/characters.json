@@ -1,0 +1,482 @@
+[
+  {
+    "id": "Wolverine",
+    "name": "Wolverine",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Wolverine.png",
+    "traits": ["Mutant", "Bio", "Brawler", "X-Men", "Weapon X", "Hero", "Global"],
+    "abilities": {
+      "basic": {
+        "name": "Slash",
+        "description": "Attack primary target for 300% damage. Gain Regeneration for 1 turn."
+      },
+      "special": {
+        "name": "Berserker Fury",
+        "description": "Attack primary target for 340% damage. Chain to 1-3 adjacent targets for 250% damage. Gain Offense Up for 2 turns."
+      },
+      "ultimate": {
+        "name": "Weapon X",
+        "description": "Attack all enemies for 350% damage. Apply Bleed to all enemies for 2 turns."
+      },
+      "passive": {
+        "name": "Healing Factor",
+        "description": "On Turn, heal self for 10% of Max Health. When this character drops below 50% Health, gain Regeneration for 2 turns. On War Defense, gain +20% Max Health."
+      }
+    }
+  },
+  {
+    "id": "BlackWidow",
+    "name": "Black Widow",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/BlackWidow.png",
+    "traits": ["Skill", "Controller", "Avenger", "S.H.I.E.L.D.", "Hero", "Global", "Spy"],
+    "abilities": {
+      "basic": {
+        "name": "Pistol Shot",
+        "description": "Attack primary target for 280% damage. 50% chance to apply Slow to the target."
+      },
+      "special": {
+        "name": "Acrobatic Assault",
+        "description": "Attack primary target for 300% damage. Apply Speed Down for 2 turns. Steal 1 positive effect from the target."
+      },
+      "ultimate": {
+        "name": "Widow's Bite",
+        "description": "Attack all enemies for 300% damage. Apply Stun to primary target. Apply Speed Down to all enemies for 2 turns."
+      },
+      "passive": {
+        "name": "Espionage",
+        "description": "On Spawn, apply Speed Up to all allies for 2 turns. On Turn, 30% chance to gain Stealth for 1 turn. In War, gain +20% Speed."
+      }
+    }
+  },
+  {
+    "id": "IronMan",
+    "name": "Iron Man",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/IronMan.png",
+    "traits": ["Tech", "Blaster", "Avenger", "Power Armor", "Hero", "Global"],
+    "abilities": {
+      "basic": {
+        "name": "Repulsor Blast",
+        "description": "Attack primary target for 350% damage. Gain Offense Up if Health is above 50%."
+      },
+      "special": {
+        "name": "Unibeam",
+        "description": "Attack primary target for 500% damage. Apply Defense Down for 2 turns. If target is already Defense Down, deal 50% bonus damage."
+      },
+      "ultimate": {
+        "name": "Missile Barrage",
+        "description": "Attack all enemies for 400% damage. Apply Offense Down to all enemies for 2 turns."
+      },
+      "passive": {
+        "name": "Arc Reactor",
+        "description": "On Spawn, gain Deflect for 2 turns. On Turn, generate 1 Ability Energy for self. When an ally Tech character uses an ability, 25% chance to assist. In Crucible, gain +30% Damage."
+      }
+    }
+  },
+  {
+    "id": "CaptainAmerica",
+    "name": "Captain America",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/CaptainAmerica.png",
+    "traits": ["Bio", "Protector", "Avenger", "Hero", "Global", "Military"],
+    "abilities": {
+      "basic": {
+        "name": "Shield Bash",
+        "description": "Attack primary target for 280% damage. Apply Slow for 1 turn."
+      },
+      "special": {
+        "name": "Inspire",
+        "description": "Apply Defense Up to all allies for 2 turns. Apply Taunt to self for 2 turns. Generate 1 Ability Energy for all allies."
+      },
+      "ultimate": {
+        "name": "Shield Throw",
+        "description": "Attack primary target for 350% damage. Chain to 3 adjacent targets for 200% damage. Apply Stun to primary target."
+      },
+      "passive": {
+        "name": "Lead by Example",
+        "description": "On Spawn, apply Defense Up to all allies for 1 turn. Block chance increased by 25%. When an ally drops below 50% Health, apply Taunt to self. On War Defense, gain +30% Block Amount and prevent Ability Block on self."
+      }
+    }
+  },
+  {
+    "id": "SpiderMan",
+    "name": "Spider-Man",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/SpiderMan.png",
+    "traits": ["Bio", "Brawler", "Spider-Verse", "Web-Warrior", "Hero", "City"],
+    "abilities": {
+      "basic": {
+        "name": "Web Punch",
+        "description": "Attack primary target for 300% damage. 50% chance to chain to 1 adjacent target."
+      },
+      "special": {
+        "name": "Web Slinger",
+        "description": "Attack primary target for 280% damage. Apply Defense Down and Slow for 2 turns. 60% chance to Dodge next attack."
+      },
+      "ultimate": {
+        "name": "Web Bomb",
+        "description": "Attack all enemies for 320% damage. Apply Stun to primary target. Apply Slow to all enemies for 2 turns."
+      },
+      "passive": {
+        "name": "Spider Sense",
+        "description": "On Spawn, gain Evade for 2 charges. 30% chance to Dodge attacks. When this character Dodges, counter attack for 200% damage. Prevent Speed Down on self and Spider-Verse allies."
+      }
+    }
+  },
+  {
+    "id": "DoctorStrange",
+    "name": "Doctor Strange",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/DoctorStrange.png",
+    "traits": ["Mystic", "Support", "Hero", "Cosmic", "Supernatural", "Illuminati"],
+    "abilities": {
+      "basic": {
+        "name": "Bolts of Balthakk",
+        "description": "Attack primary target for 300% damage. Flip 1 positive effect on target."
+      },
+      "special": {
+        "name": "Winds of Watoomb",
+        "description": "Revive a dead ally with 40% Health. Apply Regeneration to all allies for 2 turns."
+      },
+      "ultimate": {
+        "name": "Astral Mediation",
+        "description": "Apply Stun to all enemies for 1 turn. Clear all negative effects from all allies."
+      },
+      "passive": {
+        "name": "Sorcerer Supreme",
+        "description": "On Spawn, fill Speed Bar for self by 30%. When any character dies, heal all allies for 10% of Max Health. On Death, revive self with 30% Health once per battle. Prevent Heal Block on Mystic allies."
+      }
+    }
+  },
+  {
+    "id": "Thor",
+    "name": "Thor",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Thor.png",
+    "traits": ["Mystic", "Blaster", "Avenger", "Asgardian", "Hero", "Cosmic"],
+    "abilities": {
+      "basic": {
+        "name": "Hammer Strike",
+        "description": "Attack primary target for 350% damage. On Charged, chain to 2 adjacent targets."
+      },
+      "special": {
+        "name": "God of Thunder",
+        "description": "Attack primary target for 450% damage. Apply Offense Down for 2 turns. Gain Charged."
+      },
+      "ultimate": {
+        "name": "Lightning Storm",
+        "description": "Attack all enemies for 450% damage. Apply Stun to primary target. Apply Blind to all other enemies."
+      },
+      "passive": {
+        "name": "Asgardian Might",
+        "description": "On Spawn, gain Charged. When Charged, gain +50% damage. When an Asgardian ally takes damage, gain +10% Speed Bar. In War, Asgardian allies gain +20% Resistance and prevent Speed Down."
+      }
+    }
+  },
+  {
+    "id": "Thanos",
+    "name": "Thanos",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Thanos.png",
+    "traits": ["Mystic", "Protector", "Villain", "Cosmic", "Black Order", "Eternal"],
+    "abilities": {
+      "basic": {
+        "name": "Titan Punch",
+        "description": "Attack primary target for 350% damage. Apply Defense Down for 2 turns."
+      },
+      "special": {
+        "name": "Power of the Gauntlet",
+        "description": "Attack all enemies for 380% damage. Apply Offense Down and Defense Down for 2 turns. Self: Gain Taunt for 2 turns."
+      },
+      "ultimate": {
+        "name": "The Snap",
+        "description": "Attack all enemies for 500% damage. 50% chance to apply Stun to each enemy. Gain Deathproof."
+      },
+      "passive": {
+        "name": "Infinite Power",
+        "description": "On Spawn, gain Taunt for 1 turn. When any character dies, generate 2 Ability Energy for self. On Kill, heal self for 20% of Max Health. In War, Black Order allies gain +25% Max Health and prevent Ability Block."
+      }
+    }
+  },
+  {
+    "id": "EmmaFrost",
+    "name": "Emma Frost",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/EmmaFrost.png",
+    "traits": ["Mutant", "Controller", "Villain", "Marauder", "Hellfire Club", "Global"],
+    "abilities": {
+      "basic": {
+        "name": "Psychic Bolt",
+        "description": "Attack primary target for 300% damage. Apply Ability Block for 1 turn. In Diamond Form, attack for 350% damage instead."
+      },
+      "special": {
+        "name": "Diamond Form",
+        "description": "Gain Defense Up for 2 turns. Gain Immunity for 2 turns. Gain Taunt for 1 turn. Enter Diamond Form for 2 turns."
+      },
+      "ultimate": {
+        "name": "Telepathic Assault",
+        "description": "Attack all enemies for 400% damage. Apply Disrupted to all enemies for 2 turns. Clear all positive effects from enemies."
+      },
+      "passive": {
+        "name": "White Queen",
+        "description": "On Spawn, fill Speed Bar by 20% for self. When an enemy gains a positive effect, 20% chance to copy it. On War Defense, apply Immunity to Marauder allies on Spawn. Prevent Heal Block and Disrupted on Mutant allies."
+      }
+    }
+  },
+  {
+    "id": "NickFury",
+    "name": "Nick Fury",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/NickFury.png",
+    "traits": ["Skill", "Support", "S.H.I.E.L.D.", "Hero", "Global", "Military", "Spy"],
+    "abilities": {
+      "basic": {
+        "name": "Quick Shot",
+        "description": "Attack primary target for 280% damage. Call a S.H.I.E.L.D. ally to assist."
+      },
+      "special": {
+        "name": "Rally the Troops",
+        "description": "Apply Speed Up to all S.H.I.E.L.D. allies for 2 turns. Apply Offense Up to all S.H.I.E.L.D. allies for 2 turns. Generate 1 Ability Energy for all allies."
+      },
+      "ultimate": {
+        "name": "Director's Orders",
+        "description": "Summon 2 S.H.I.E.L.D. minions. Apply Stealth to all S.H.I.E.L.D. allies for 2 turns."
+      },
+      "passive": {
+        "name": "Strategic Genius",
+        "description": "On Spawn, fill Speed Bar for all S.H.I.E.L.D. allies by 30%. On Turn, heal all S.H.I.E.L.D. allies for 5% of Max Health. In War, S.H.I.E.L.D. allies gain +20% Speed and prevent Speed Down."
+      }
+    }
+  },
+  {
+    "id": "Deadpool",
+    "name": "Deadpool",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Deadpool.png",
+    "traits": ["Mutant", "Brawler", "Mercenary", "Hero", "City", "X-Force"],
+    "abilities": {
+      "basic": {
+        "name": "Stab Stab",
+        "description": "Attack primary target for 300% damage. Apply Bleed for 2 turns."
+      },
+      "special": {
+        "name": "Slice and Dice",
+        "description": "Attack primary target for 350% damage. Chain to 2 adjacent targets for 250% damage. Apply Bleed to all targets for 2 turns."
+      },
+      "ultimate": {
+        "name": "One for Me, One for You",
+        "description": "Attack primary target for 600% damage. If target has Bleed, deal 30% bonus damage."
+      },
+      "passive": {
+        "name": "Maximum Effort",
+        "description": "On Turn, heal self for 15% of Max Health. When this character drops below 25% Health, gain Deathproof. On Kill, gain Offense Up for 2 turns. In War, gain +30% Damage and prevent Heal Block on self."
+      }
+    }
+  },
+  {
+    "id": "MilesMorales",
+    "name": "Miles Morales",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/MilesMorales.png",
+    "traits": ["Bio", "Brawler", "Spider-Verse", "Web-Warrior", "Hero", "City", "Young Avenger"],
+    "abilities": {
+      "basic": {
+        "name": "Venom Strike",
+        "description": "Attack primary target for 290% damage. Apply Offense Down for 1 turn."
+      },
+      "special": {
+        "name": "Camouflage",
+        "description": "Gain Stealth and Evade for 2 turns. Apply Speed Up to self and Spider-Verse allies for 2 turns."
+      },
+      "ultimate": {
+        "name": "Into the Spider-Verse",
+        "description": "Attack all enemies for 350% damage. Apply Disrupt to all enemies for 1 turn. If Stealthed, apply Stun to primary target."
+      },
+      "passive": {
+        "name": "Kid Arachnid",
+        "description": "On Spawn, gain Evade. When any Spider-Verse ally is attacked, 20% chance to assist. When this character Dodges, fill Speed Bar by 20%. Prevent Speed Down on Spider-Verse allies in War and Crucible."
+      }
+    }
+  },
+  {
+    "id": "Morgan",
+    "name": "Morgan Le Fay",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Morgan.png",
+    "traits": ["Mystic", "Controller", "Villain", "Cosmic", "Darkhold", "Sorcerer"],
+    "abilities": {
+      "basic": {
+        "name": "Dark Bolt",
+        "description": "Attack primary target for 320% damage. Apply Bleed for 2 turns. Steal 1 positive effect."
+      },
+      "special": {
+        "name": "Hex Curse",
+        "description": "Attack all enemies for 300% damage. Apply Disrupted to all enemies for 2 turns. Apply Slow to all enemies for 2 turns."
+      },
+      "ultimate": {
+        "name": "Darkhold Dominion",
+        "description": "Attack all enemies for 450% damage. Apply Ability Block to all enemies for 1 turn. Clear all positive effects from enemies. In Crucible, deal +20% bonus damage."
+      },
+      "passive": {
+        "name": "Darkhold's Embrace",
+        "description": "On Spawn, apply Immunity to Darkhold allies for 2 turns. On enemy Turn, drain 5% Speed Bar from each enemy. When a Darkhold ally attacks, apply Regeneration to that ally. Prevent Disrupted and Ability Block on Darkhold allies."
+      }
+    }
+  },
+  {
+    "id": "Kestrel",
+    "name": "Kestrel",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Kestrel.png",
+    "traits": ["Tech", "Blaster", "Hero", "Cosmic", "S.W.O.R.D.", "Military"],
+    "abilities": {
+      "basic": {
+        "name": "Plasma Barrage",
+        "description": "Attack primary target for 350% damage. If target has any positive effects, bonus attack for 150% damage."
+      },
+      "special": {
+        "name": "Photon Blast",
+        "description": "Attack primary target for 500% damage. Flip all positive effects on target. Apply Disrupted for 2 turns."
+      },
+      "ultimate": {
+        "name": "Obliteration Protocol",
+        "description": "Attack all enemies for 420% damage. Remove Stealth from all enemies. Apply Heal Block to all enemies for 2 turns."
+      },
+      "passive": {
+        "name": "S.W.O.R.D. Operative",
+        "description": "On Spawn, gain Safeguard for 2 turns. On enemy Turn, if enemy gains Stealth, remove it. When an enemy attempts to apply Speed Down or Slow to any ally, prevent it and apply Speed Up to that ally instead. In War, gain +40% Focus."
+      }
+    }
+  },
+  {
+    "id": "BlackPanther",
+    "name": "Black Panther",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/BlackPanther.png",
+    "traits": ["Bio", "Brawler", "Avenger", "Wakanda", "Hero", "Global"],
+    "abilities": {
+      "basic": {
+        "name": "Panther Strike",
+        "description": "Attack primary target for 320% damage. Apply Bleed for 2 turns."
+      },
+      "special": {
+        "name": "Vibranium Suit",
+        "description": "Gain Defense Up for 2 turns. Counter attack for the next 2 attacks received. Apply Speed Up to self for 2 turns."
+      },
+      "ultimate": {
+        "name": "Wakanda Forever",
+        "description": "Attack all enemies for 380% damage. Apply Defense Down to all enemies for 2 turns. On Kill, gain Offense Up and Speed Up."
+      },
+      "passive": {
+        "name": "King of Wakanda",
+        "description": "On Spawn, gain Deflect. On Kill, gain +50% Speed Bar. When attacked, 20% chance to counter for 200% damage. In War, Wakanda allies gain +20% Armor and prevent Defense Down."
+      }
+    }
+  },
+  {
+    "id": "Gamora",
+    "name": "Gamora",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Gamora.png",
+    "traits": ["Bio", "Brawler", "Guardian", "Hero", "Cosmic", "Infinity Watch"],
+    "abilities": {
+      "basic": {
+        "name": "Godslayer Blade",
+        "description": "Attack primary target for 330% damage. If target is below 25% Health, deal 100% bonus damage."
+      },
+      "special": {
+        "name": "Ruthless Blade",
+        "description": "Attack primary target for 400% damage. Apply Bleed for 2 turns. If target already has Bleed, apply Defense Down."
+      },
+      "ultimate": {
+        "name": "Whirlwind of Death",
+        "description": "Attack all enemies for 380% damage. On each Kill, take an additional turn."
+      },
+      "passive": {
+        "name": "Deadliest Woman",
+        "description": "On Kill, gain Speed Up for 1 turn and fill Speed Bar by 30%. When Infinity Watch ally attacks, 15% chance to assist. In Crucible, gain +25% Crit Chance and prevent Offense Down on Infinity Watch allies."
+      }
+    }
+  },
+  {
+    "id": "Loki",
+    "name": "Loki",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Loki.png",
+    "traits": ["Mystic", "Controller", "Villain", "Cosmic", "Asgardian", "Trickster"],
+    "abilities": {
+      "basic": {
+        "name": "Arcane Blast",
+        "description": "Attack primary target for 300% damage. Copy 1 positive effect from target."
+      },
+      "special": {
+        "name": "Illusions",
+        "description": "Apply Stealth to self and all Asgardian allies for 2 turns. Summon 2 Mirror Images. Apply Speed Up to self."
+      },
+      "ultimate": {
+        "name": "God of Mischief",
+        "description": "Attack all enemies for 380% damage. Apply Mind Control to 1 enemy for 1 turn. Clear all positive effects from all enemies."
+      },
+      "passive": {
+        "name": "Trickster God",
+        "description": "On Spawn, gain Stealth for 2 turns. When an enemy uses an ability, 10% chance to copy all positive effects from that enemy. On War Defense, Asgardian allies gain +25% Resistance. Prevent Ability Block on Asgardian allies."
+      }
+    }
+  },
+  {
+    "id": "Dormammu",
+    "name": "Dormammu",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Dormammu.png",
+    "traits": ["Mystic", "Blaster", "Villain", "Cosmic", "Supernatural", "Eternal"],
+    "abilities": {
+      "basic": {
+        "name": "Dark Dimension Bolt",
+        "description": "Attack primary target for 400% damage. Apply Heal Block for 2 turns."
+      },
+      "special": {
+        "name": "Flames of the Faltine",
+        "description": "Attack all enemies for 380% damage. Apply Bleed and Burn to all enemies for 2 turns."
+      },
+      "ultimate": {
+        "name": "Dimensional Rift",
+        "description": "Attack all enemies for 550% damage. Cannot be blocked or dodged. Apply Trauma to all enemies."
+      },
+      "passive": {
+        "name": "Lord of the Dark Dimension",
+        "description": "On Spawn, gain Charged. Immune to Stun, Ability Block, and Heal Block. When any character dies, gain +10% Max Damage permanently. On enemy Death, fill Speed Bar by 25% for all Dark Dimension allies. Prevent all debuffs on self in the first turn of combat."
+      }
+    }
+  },
+  {
+    "id": "Apocalypse",
+    "name": "Apocalypse",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/Apocalypse.png",
+    "traits": ["Mutant", "Blaster", "Villain", "Cosmic", "Horseman", "Eternal"],
+    "abilities": {
+      "basic": {
+        "name": "Celestial Strike",
+        "description": "Attack primary target for 400% damage. Apply Disrupted for 1 turn."
+      },
+      "special": {
+        "name": "Survival of the Fittest",
+        "description": "Attack all enemies for 350% damage. Apply Offense Down and Defense Down for 2 turns. If Horseman ally present, apply Trauma."
+      },
+      "ultimate": {
+        "name": "Age of Apocalypse",
+        "description": "Attack all enemies for 600% damage. Apply Stun to all enemies for 1 turn. Clear all positive effects from all enemies."
+      },
+      "passive": {
+        "name": "First Mutant",
+        "description": "On Spawn, gain Safeguard and Immunity for 2 turns. Immune to Speed Down, Slow, Stun, and Ability Block. When a Horseman ally uses an ultimate, gain +20% Speed Bar. On War Offense, all Horseman allies gain +30% Damage. Prevent Speed Down and Ability Block on all Horseman allies."
+      }
+    }
+  },
+  {
+    "id": "RedHulk",
+    "name": "Red Hulk",
+    "portrait": "https://cdn-msf.marvelstrikeforce.com/static/portraits/RedHulk.png",
+    "traits": ["Bio", "Brawler", "Villain", "Global", "Gamma", "Military"],
+    "abilities": {
+      "basic": {
+        "name": "Gamma Punch",
+        "description": "Attack primary target for 350% damage. Apply Offense Down for 1 turn."
+      },
+      "special": {
+        "name": "Heat Wave",
+        "description": "Attack all enemies for 300% damage. Apply Burn to all enemies for 2 turns. Gain Taunt for 1 turn."
+      },
+      "ultimate": {
+        "name": "Gamma Overload",
+        "description": "Attack all enemies for 450% damage. Remove all positive effects from enemies. Apply Heal Block for 2 turns."
+      },
+      "passive": {
+        "name": "Burning Rage",
+        "description": "On Turn, gain +5% Damage for each negative effect on enemies (max 50%). When attacked, 30% chance to apply Burn to attacker. On War Offense, gain +25% Max Health. Prevent Heal Block on Gamma allies."
+      }
+    }
+  }
+]
