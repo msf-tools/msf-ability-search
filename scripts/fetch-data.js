@@ -96,17 +96,33 @@ async function fetchJSON(path, params = {}, headers) {
 }
 
 async function fetchAllCharacters(headers) {
-  // Fetch characters with full ability kits
-  const data = await fetchJSON('/game/v1/characters', {
-    lang: 'en',
-    abilityKits: 'full',
-    statsFormat: 'csv',
-    traitFormat: 'full',
-    charInfo_char: 'full',
-    perPage: '500',
-  }, headers);
+  const allCharacters = [];
+  let page = 1;
+  const perPage = 50;
 
-  return data.data || data;
+  while (true) {
+    const data = await fetchJSON('/game/v1/characters', {
+      lang: 'en',
+      abilityKits: 'full',
+      traitFormat: 'full',
+      perPage: String(perPage),
+      page: String(page),
+    }, headers);
+
+    const characters = data.data || data;
+    if (!Array.isArray(characters) || characters.length === 0) break;
+
+    allCharacters.push(...characters);
+    console.log(`   Page ${page}: ${characters.length} characters (${allCharacters.length} total)`);
+
+    const total = data.meta?.perTotal;
+    if (total && allCharacters.length >= total) break;
+    if (characters.length < perPage) break;
+
+    page++;
+  }
+
+  return allCharacters;
 }
 
 async function fetchTraits(headers) {
