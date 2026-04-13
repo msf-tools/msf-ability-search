@@ -8184,6 +8184,7 @@
   },
   {
     "id": "PVE_Boss_Maestro",
+    "name": "PVE_Boss_Maestro",
     "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_PVE_Boss_Maestro_9560b33f.png",
     "traits": [
       "VILLAIN",
