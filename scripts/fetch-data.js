@@ -34,8 +34,8 @@ const TOKEN_URL = 'https://hydra-public.prod.m3.scopelypv.com/oauth2/token';
 // Public beta API key — override with MSF_API_KEY env var if needed
 const API_KEY = process.env.MSF_API_KEY || '17wMKJLRxy3pYDCKG5ciP7VSU45OVumB2biCzzgw';
 
-// Client ID from the MSF developer portal app registration
-const CLIENT_ID = process.env.MSF_CLIENT_ID || '1e99a762-b02e-401c-b5ba-dd8380e6e77d';
+// Client ID from the MSF developer portal M2M app registration
+const CLIENT_ID = process.env.MSF_CLIENT_ID || 'e69a9dbb-1de7-45f2-9dcd-9d5aceb63f0c';
 
 // Client secret — only available for M2M/backend app types, not required for SPA public clients
 const CLIENT_SECRET = process.env.MSF_CLIENT_SECRET;
