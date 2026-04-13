@@ -8,8 +8,11 @@
  * frontend to consume.
  *
  * Environment variables required:
- *   MSF_API_KEY       - Your API key from the MSF developer portal
- *   MSF_ACCESS_TOKEN  - OAuth2 bearer token
+ *   MSF_CLIENT_ID     - Your OAuth2 Client ID from the MSF developer portal
+ *   MSF_CLIENT_SECRET - Your OAuth2 Client Secret from the MSF developer portal
+ *
+ * Optional:
+ *   MSF_API_KEY       - Override the default public beta API key
  *
  * Usage:
  *   node scripts/fetch-data.js
@@ -26,23 +29,62 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_DIR = join(__dirname, '..', 'public', 'data');
 
 const BASE_URL = 'https://api.marvelstrikeforce.com';
-const API_KEY = process.env.MSF_API_KEY;
-const ACCESS_TOKEN = process.env.MSF_ACCESS_TOKEN;
+const TOKEN_URL = 'https://hydra-public.prod.m3.scopelypv.com/oauth2/token';
 
-if (!API_KEY || !ACCESS_TOKEN) {
-  console.error('Missing required environment variables: MSF_API_KEY and MSF_ACCESS_TOKEN');
-  console.error('Set these in your GitHub repository secrets or local .env file.');
-  process.exit(1);
+// Public beta API key — override with MSF_API_KEY env var if needed
+const API_KEY = process.env.MSF_API_KEY || '17wMKJLRxy3pYDCKG5ciP7VSU45OVumB2biCzzgw';
+
+// Client ID from the MSF developer portal app registration
+const CLIENT_ID = process.env.MSF_CLIENT_ID || '1e99a762-b02e-401c-b5ba-dd8380e6e77d';
+
+// Client secret — only available for M2M/backend app types, not required for SPA public clients
+const CLIENT_SECRET = process.env.MSF_CLIENT_SECRET;
+
+async function fetchAccessToken() {
+  console.log('Fetching OAuth2 access token (client credentials)...');
+
+  const params = {
+    grant_type: 'client_credentials',
+    client_id: CLIENT_ID,
+  };
+
+  // Include client_secret only if provided (M2M/backend app type)
+  if (CLIENT_SECRET) {
+    params.client_secret = CLIENT_SECRET;
+  }
+
+  const body = new URLSearchParams(params);
+
+  const res = await fetch(TOKEN_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString(),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Token request failed (${res.status}): ${text}`);
+  }
+
+  const data = await res.json();
+  if (!data.access_token) {
+    throw new Error(`Token response missing access_token: ${JSON.stringify(data)}`);
+  }
+
+  console.log(`  Token obtained (expires in ${data.expires_in}s)`);
+  return data.access_token;
 }
 
-const headers = {
-  'x-api-key': API_KEY,
-  Authorization: `Bearer ${ACCESS_TOKEN}`,
-  'User-Agent': 'MSFAbilitySearch/1.0 (Server)',
-  Accept: 'application/json',
-};
+function makeHeaders(accessToken) {
+  return {
+    'x-api-key': API_KEY,
+    Authorization: `Bearer ${accessToken}`,
+    'User-Agent': 'MSFAbilitySearch/1.0 (Server)',
+    Accept: 'application/json',
+  };
+}
 
-async function fetchJSON(path, params = {}) {
+async function fetchJSON(path, params = {}, headers) {
   const url = new URL(`${BASE_URL}${path}`);
   Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
 
@@ -57,7 +99,7 @@ async function fetchJSON(path, params = {}) {
   return res.json();
 }
 
-async function fetchAllCharacters() {
+async function fetchAllCharacters(headers) {
   // Fetch characters with full ability kits
   const data = await fetchJSON('/game/v1/characters', {
     lang: 'en',
@@ -66,16 +108,16 @@ async function fetchAllCharacters() {
     traitFormat: 'full',
     charInfo_char: 'full',
     perPage: '500',
-  });
+  }, headers);
 
   return data.data || data;
 }
 
-async function fetchTraits() {
+async function fetchTraits(headers) {
   const data = await fetchJSON('/game/v1/traits', {
     lang: 'en',
     traitFormat: 'full',
-  });
+  }, headers);
 
   return data.data || data;
 }
@@ -136,12 +178,16 @@ async function main() {
   console.log('==================================');
 
   try {
+    console.log('\n0. Authenticating...');
+    const accessToken = await fetchAccessToken();
+    const headers = makeHeaders(accessToken);
+
     console.log('\n1. Fetching characters...');
-    const rawCharacters = await fetchAllCharacters();
+    const rawCharacters = await fetchAllCharacters(headers);
     console.log(`   Found ${Array.isArray(rawCharacters) ? rawCharacters.length : 'unknown'} characters`);
 
     console.log('\n2. Fetching traits...');
-    const traits = await fetchTraits();
+    const traits = await fetchTraits(headers);
     console.log(`   Found ${Array.isArray(traits) ? traits.length : 'unknown'} traits`);
 
     console.log('\n3. Normalizing data...');

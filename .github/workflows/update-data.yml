@@ -21,8 +21,11 @@ jobs:
 
       - name: Fetch latest character data
         env:
-          MSF_API_KEY: ${{ secrets.MSF_API_KEY }}
-          MSF_ACCESS_TOKEN: ${{ secrets.MSF_ACCESS_TOKEN }}
+          # MSF_CLIENT_ID is hardcoded in the script (public SPA client ID)
+          # Add MSF_CLIENT_SECRET secret if you register a M2M/backend app in the portal
+          MSF_CLIENT_SECRET: ${{ secrets.MSF_CLIENT_SECRET }}
+          # Optional: override the default public beta API key
+          # MSF_API_KEY: ${{ secrets.MSF_API_KEY }}
         run: node scripts/fetch-data.js
 
       - name: Check for changes
