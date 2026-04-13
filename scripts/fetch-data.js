@@ -112,6 +112,12 @@ async function fetchAllCharacters(headers) {
     const characters = data.data || data;
     if (!Array.isArray(characters) || characters.length === 0) break;
 
+    // Debug: log raw structure of first character on first page
+    if (page === 1 && characters[0]) {
+      console.log('   DEBUG raw first character:');
+      console.log(JSON.stringify(characters[0], null, 2));
+    }
+
     allCharacters.push(...characters);
     console.log(`   Page ${page}: ${characters.length} characters (${allCharacters.length} total)`);
 
