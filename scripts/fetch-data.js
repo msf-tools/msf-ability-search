@@ -112,12 +112,6 @@ async function fetchAllCharacters(headers) {
     const characters = data.data || data;
     if (!Array.isArray(characters) || characters.length === 0) break;
 
-    // Debug: log raw structure of first character on first page
-    if (page === 1 && characters[0]) {
-      console.log('   DEBUG raw first character:');
-      console.log(JSON.stringify(characters[0], null, 2));
-    }
-
     allCharacters.push(...characters);
     console.log(`   Page ${page}: ${characters.length} characters (${allCharacters.length} total)`);
 
@@ -140,13 +134,23 @@ async function fetchTraits(headers) {
   return data.data || data;
 }
 
+function stripColorTags(text) {
+  if (!text) return '';
+  return text.replace(/<color=[^>]+>/g, '').replace(/<\/color>/g, '');
+}
+
+function getMaxLevelDescription(ability) {
+  if (!ability?.levels) return '';
+  const levels = ability.levels;
+  const maxLevel = Math.max(...Object.keys(levels).map(Number));
+  return stripColorTags(levels[maxLevel]?.description || '');
+}
+
 function normalizeCharacter(raw) {
-  // Adapt this mapping based on actual API response structure
-  // The API response structure may vary - adjust field names as needed
   const char = {
-    id: raw.id || raw.characterId,
-    name: raw.name || raw.displayName || raw.id,
-    portrait: raw.portrait || raw.portraitUrl || raw.image || null,
+    id: raw.id,
+    name: raw.name,
+    portrait: raw.portrait || null,
     traits: [],
     abilities: {
       basic: null,
@@ -156,37 +160,20 @@ function normalizeCharacter(raw) {
     },
   };
 
-  // Extract traits
   if (Array.isArray(raw.traits)) {
     char.traits = raw.traits.map((t) => (typeof t === 'string' ? t : t.name || t.id));
   }
 
-  // Extract abilities from ability kits
-  const abilityKit = raw.abilityKit || raw.abilities || raw.abilityKits || {};
-  const abilityTypes = ['basic', 'special', 'ultimate', 'passive'];
-
-  abilityTypes.forEach((type) => {
+  const abilityKit = raw.abilityKit || {};
+  ['basic', 'special', 'ultimate', 'passive'].forEach((type) => {
     const ability = abilityKit[type];
     if (ability) {
       char.abilities[type] = {
-        name: ability.name || ability.displayName || type,
-        description: ability.description || ability.text || '',
+        name: ability.name,
+        description: getMaxLevelDescription(ability),
       };
     }
   });
-
-  // If abilities are in an array format instead
-  if (Array.isArray(abilityKit)) {
-    abilityKit.forEach((ability) => {
-      const type = ability.type?.toLowerCase() || ability.abilityType?.toLowerCase();
-      if (type && abilityTypes.includes(type)) {
-        char.abilities[type] = {
-          name: ability.name || ability.displayName || type,
-          description: ability.description || ability.text || '',
-        };
-      }
-    });
-  }
 
   return char;
 }
