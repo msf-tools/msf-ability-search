@@ -149,7 +149,7 @@ function getMaxLevelDescription(ability) {
 function normalizeCharacter(raw) {
   const char = {
     id: raw.id,
-    name: raw.name,
+    name: raw.name || raw.id || 'Unknown',
     portrait: raw.portrait || null,
     traits: [],
     abilities: {

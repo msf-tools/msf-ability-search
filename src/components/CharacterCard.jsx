@@ -102,7 +102,7 @@ export default function CharacterCard({ result, query, allAbilities }) {
             }}
           />
           <div className="portrait-fallback" style={{ display: 'none' }}>
-            {character.name.charAt(0)}
+            {character.name?.charAt(0) ?? '?'}
           </div>
         </div>
         <div className="character-info">
