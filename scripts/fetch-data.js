@@ -98,7 +98,7 @@ async function fetchJSON(path, params = {}, headers) {
 async function fetchAllCharacters(headers) {
   const allCharacters = [];
   let page = 1;
-  const perPage = 50;
+  const perPage = 20;
 
   while (true) {
     const data = await fetchJSON('/game/v1/characters', {
