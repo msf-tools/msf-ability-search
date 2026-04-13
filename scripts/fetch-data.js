@@ -43,21 +43,17 @@ const CLIENT_SECRET = process.env.MSF_CLIENT_SECRET;
 async function fetchAccessToken() {
   console.log('Fetching OAuth2 access token (client credentials)...');
 
-  const params = {
-    grant_type: 'client_credentials',
-    client_id: CLIENT_ID,
-  };
+  const body = new URLSearchParams({ grant_type: 'client_credentials' });
 
-  // Include client_secret only if provided (M2M/backend app type)
-  if (CLIENT_SECRET) {
-    params.client_secret = CLIENT_SECRET;
-  }
-
-  const body = new URLSearchParams(params);
+  // Use client_secret_basic: credentials in Authorization header as Base64
+  const credentials = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
 
   const res = await fetch(TOKEN_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Authorization: `Basic ${credentials}`,
+    },
     body: body.toString(),
   });
 
