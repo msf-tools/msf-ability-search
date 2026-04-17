@@ -439,7 +439,7 @@
       "ultimate": null,
       "passive": {
         "name": "Cosmic Bug",
-        "description": "On Turn, if Annihilus is an ally, gain Taunt.\n\nThis character cannot have their Speed Bar fill prevented through Passive Abilites."
+        "description": "On Spawn, if this character has no Insectoid Devourer allies gain Deathproof.\n\nOn Turn, if Annihilus is an ally, gain Taunt.\n\nThis character cannot have their Speed Bar fill or Deathproof prevented through Passive Abilites."
       }
     }
   },
