@@ -70,7 +70,8 @@
       "SUPPORT",
       "INFINITY WATCH",
       "GALACTIC COUNCIL",
-      "LEGENDARY"
+      "LEGENDARY",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -101,7 +102,8 @@
       "MYSTIC",
       "SUPPORT",
       "DARKHOLD",
-      "NIGHTSTALKER"
+      "NIGHTSTALKER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -304,7 +306,8 @@
       "BIO",
       "SUPPORT",
       "GAMMA",
-      "CHAMPION"
+      "CHAMPION",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -364,7 +367,8 @@
       "GLOBAL",
       "MYSTIC",
       "BRAWLER",
-      "ASTRAL"
+      "ASTRAL",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -386,6 +390,37 @@
     }
   },
   {
+    "id": "Angel",
+    "name": "Angel",
+    "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_Angel_6310563d.png",
+    "traits": [
+      "HERO",
+      "GLOBAL",
+      "MUTANT",
+      "SUPPORT",
+      "EXALTED X-MEN",
+      "FEAR"
+    ],
+    "abilities": {
+      "basic": {
+        "name": "Wing Attack",
+        "description": "Attack primary target for 280% damage.\n\nApply Regeneration to self and all EXALTED X-MEN allies.\n\nLose Vitality.\n\nWhen forced to attack an EXALTED X-MEN ally, this character deals less damage and this attack will not reduce the Max Health of the target.\n\nThis attack cannot be counterattacked."
+      },
+      "special": {
+        "name": "Angelic Strikes",
+        "description": "Attack primary target for 250% damage + Chain to 4 adjacent targets for 250% damage.\n\nFlip all negative effects to positive effects for self and all allies + apply Defense Up for 2 turns for self and all allies.\n\nBarrier self and all X-MEN allies for 15% of this character's Max Health.\nHeal self and all X-MEN allies for 25% of this character's Max Health.\n\nThis attack cannot be counterattacked."
+      },
+      "ultimate": {
+        "name": "Sky Attack",
+        "description": "Flip all negative effects into positive effects on self and all EXALTED X-MEN allies.\n\nAttack primary and adjacent targets for 350% damage.\n\nApply 2 Deathproof to self and all allies.\n\nBarrier self and all X-MEN allies for 20% of this character's Max Health.\nHeal self and all X-MEN allies for 30% of this character's Max Health.\n\nThis attack cannot be counterattacked."
+      },
+      "passive": {
+        "name": "Guardian Angel",
+        "description": "On Spawn:\n > Barrier self and all EXALTED X-MEN for 20% of this character's Max Health + apply Defense Up for 2 turns.\n > Gain Vitality and Taunt for 2 turns, if this character does not gain Taunt, instead, apply Stealth for 2 turns to all EXALTED X-MEN.\n\nWhen this character is attacked by an enemy, if this character has Vitality:\n > Heal all EXALTED X-MEN for 10% of this character's Max Health.\n > Flip 3 negative effects to positive effects on all EXALTED X-MEN allies.\n > Apply Defense Up for 2 turns to self and all EXALTED X-MEN\n\nIn CRUCIBLE, if this character has Vitality, and has 3 EXALTED X-MEN allies:\n > Gain +50% Damage Reduction, up to a maximum of 80% Damage Reduction.\n > This character and all EXALTED X-MEN allies cannot gain Bleed, Trauma, Heal Block, or Vulnerable."
+      }
+    }
+  },
+  {
     "id": "Annihilus",
     "name": "Annihilus",
     "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_Annihilus_38efc4a8.png",
@@ -395,7 +430,8 @@
       "TECH",
       "BLASTER",
       "MYTHIC",
-      "GALACTIC COUNCIL"
+      "GALACTIC COUNCIL",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -609,7 +645,8 @@
       "MUTANT",
       "BRAWLER",
       "HELLFIRE CLUB",
-      "ACCURSED"
+      "ACCURSED",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -641,7 +678,8 @@
       "CONTROLLER",
       "SUPERNATURAL",
       "DARK HUNTER",
-      "ACCURSED"
+      "ACCURSED",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -674,7 +712,8 @@
       "UNCANNY X-MEN",
       "ASTONISHING X-MEN",
       "IMMORTAL X-MEN",
-      "UNCANNY AVENGER"
+      "UNCANNY AVENGER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -989,7 +1028,8 @@
       "MYSTIC",
       "BRAWLER",
       "VAMPIRE",
-      "NIGHTSTALKER"
+      "NIGHTSTALKER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -1021,6 +1061,7 @@
       "BLASTER",
       "GALACTIC COUNCIL",
       "LEGENDARY",
+      "TERROR",
       "DARK PROMOTION"
     ],
     "abilities": {
@@ -1081,7 +1122,8 @@
       "COSMIC",
       "BIO",
       "CONTROLLER",
-      "EPIC"
+      "EPIC",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -1172,7 +1214,8 @@
       "MUTANT",
       "BLASTER",
       "X-FORCE",
-      "IMMORTAL X-MEN"
+      "IMMORTAL X-MEN",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -1203,7 +1246,8 @@
       "MUTANT",
       "PROTECTOR",
       "X-MEN",
-      "NEW MUTANT"
+      "NEW MUTANT",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -1728,7 +1772,8 @@
       "COSMIC",
       "BIO",
       "PROTECTOR",
-      "BLACK ORDER"
+      "BLACK ORDER",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -1849,7 +1894,8 @@
       "GLOBAL",
       "MYSTIC",
       "CONTROLLER",
-      "BRIMSTONE"
+      "BRIMSTONE",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -1912,7 +1958,8 @@
       "BRAWLER",
       "DEFENDER",
       "SHADOWLAND",
-      "DARING WARRIOR"
+      "DARING WARRIOR",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -1921,7 +1968,7 @@
       },
       "special": {
         "name": "Throw Baton",
-        "description": "Attack primary target for 250% damage + Chain to 2 targets within 2 spaces of previous target for 200% damage.\n\nApply 2 Counter to self and all DEFENDER and DARING WARRIOR allies.\n\nDodge breaks this Chain."
+        "description": "Attack primary target for 250% damage + Chain to 2 targets within 2 spaces of previous target for 200% damage.\n\nApply 2 Counter to self and all DEFENDER and DARING WARRIOR allies.\n\nDodge breaks this Chain.\n\nIn CRUCIBLE or BATTLEWORLD, if this character has 3 DARING WARRIOR allies, this attack does an additional 100% damage to each target."
       },
       "ultimate": {
         "name": "Brawl",
@@ -1942,7 +1989,8 @@
       "CITY",
       "SKILL",
       "PROTECTOR",
-      "VIGILANTE"
+      "VIGILANTE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -2064,7 +2112,8 @@
       "GLOBAL",
       "MUTANT",
       "SUPPORT",
-      "WINTER GUARD"
+      "WINTER GUARD",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -2127,7 +2176,8 @@
       "X-FORCE",
       "MERCENARY",
       "MERCS FOR MONEY",
-      "RETCON"
+      "RETCON",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -2140,7 +2190,7 @@
       },
       "ultimate": {
         "name": "Hack 'n' Slash",
-        "description": "Attack primary target for 200% damage + apply Stun and 2 Bleed.\n\nRebound Chain to 5 adjacent targets for 200% damage + apply Bleed.\n\nThis attack cannot be blocked or counterattacked."
+        "description": "Attack primary target for 200% damage + apply Stun and 2 Bleed.\n\nRebound Chain to 5 adjacent targets for 200% damage + apply 2 Bleed.\n\nThis attack cannot be blocked or counterattacked."
       },
       "passive": {
         "name": "Merc with a Mouth",
@@ -2254,7 +2304,8 @@
       "SUPPORT",
       "SUPERNATURAL",
       "SECRET DEFENDER",
-      "ASTRAL"
+      "ASTRAL",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -2315,7 +2366,8 @@
       "MUTANT",
       "CONTROLLER",
       "X-FORCE",
-      "SECRET WARRIOR"
+      "SECRET WARRIOR",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -2523,12 +2575,13 @@
       "GLOBAL",
       "MYSTIC",
       "PROTECTOR",
-      "DARING WARRIOR"
+      "DARING WARRIOR",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
         "name": "Mayan Might",
-        "description": "Attack primary target for 320% damage.\n\nHeal for 5% of this character's Max Health.\nHeal the most injured ally or self for 5% of this character's Max Health.\n\nClear Full Moon and New Moon on self.\nThe first time this ability is used, gain Crescent Moon.\n\nCrescent Moon:\n > Gain +100% chance to Counterattack.\n > In CRUCIBLE or BATTLEWORLD, all allies gain +50% chance to Counterattack."
+        "description": "Attack primary target for 320% damage + apply 2 Bleed.\n\nHeal for 5% of this character's Max Health.\nHeal the most injured ally or self for 5% of this character's Max Health.\n\nClear Full Moon and New Moon on self.\nThe first time this ability is used, gain Crescent Moon.\n\nCrescent Moon:\n > Gain +100% chance to Counterattack.\n > In CRUCIBLE or BATTLEWORLD, all allies gain +50% chance to Counterattack."
       },
       "special": {
         "name": "Earthen Strike",
@@ -2536,11 +2589,11 @@
       },
       "ultimate": {
         "name": "Moonlight Wrath",
-        "description": "Clear all Barrier on all enemies.\nApply Defense Up for 2 turns  and Immunity for 2 turns to self and all allies.\n\nAttack all enemies for 500% damage.\n\nHeal self and all DARING WARRIOR allies for 25% of this character's Max Health.\n\nClear Crescent Moon and New Moon on self.\nThe first time this ability is used, gain Full Moon.\n\nFull Moon:\n > On enemy Turn, apply Offense Down to that enemy."
+        "description": "Clear all Barrier on all enemies.\nApply Defense Up for 2 turns  and Immunity for 2 turns to self and all allies.\n\nAttack all enemies for 500% damage.\n\nHeal self and all DARING WARRIOR allies for 25% of this character's Max Health.\n\nIn CRUCIBLE or BATTLEWORLD, if this character has 3 DARING WARRIOR allies, this attack does an additional 150% damage.\n\nClear Crescent Moon and New Moon on self.\nThe first time this ability is used, gain Full Moon.\n\nFull Moon:\n > On enemy Turn, apply Offense Down to that enemy."
       },
       "passive": {
         "name": "Ixchel's Avatar",
-        "description": "On Spawn:\n > Before other characters' standard On Spawn effects, attack the enemy PROTECTOR with the highest Speed for 200% damage + in CRUCIBLE or BATTLEWORLD, if this character has 3 DARING WARRIOR allies, apply Trauma for 2 turns and Silence for 2 turns to that enemy.\n > Apply Safeguard for 2 turns and Defense Up for 2 turns to self and all DARING WARRIOR allies.\n\nWhen one or more enemies die, attack a random enemy BRAWLER for 200% damage + in CRUCIBLE or BATTLEWORLD, if this characer has 3 DARING WARRIOR allies, apply Trauma for 2 turns and Silence for 2 turns to that enemy.\n\nIn CRUCIBLE or BATTLEWORLD:\n > Enemies can't Revive.\n > If this character has 3 DARING WARRIOR allies, until this character takes their second Turn, gain +100% Block Chance and +50% Block Amount, up to a maximum of +75%, for this character and all DARING WARRIOR allies."
+        "description": "On Spawn:\n > Before other characters' standard On Spawn effects, attack the enemy PROTECTOR with the highest Speed for 200% damage + in CRUCIBLE or BATTLEWORLD, if this character has 3 DARING WARRIOR allies, apply Trauma for 2 turns and Silence for 2 turns to that enemy.\n > Apply Safeguard for 2 turns and Defense Up for 2 turns to self and all DARING WARRIOR allies.\n\nWhen one or more enemies die, attack a random enemy BRAWLER for 200% damage + in CRUCIBLE or BATTLEWORLD, if this characer has 3 DARING WARRIOR allies, apply Trauma for 2 turns and Silence for 2 turns to that enemy.\n\nIn CRUCIBLE or BATTLEWORLD:\n > Enemies can't Revive.\n > If this character has 3 DARING WARRIOR allies, until this character takes their second Turn, this character cannot gain Stun and this character and all DARING WARRIOR allies gain +100% Block Chance and +50% Block Amount, up to a maximum of +75%."
       }
     }
   },
@@ -2587,7 +2640,8 @@
       "BRAWLER",
       "HAND",
       "SHADOWLAND",
-      "VIGILANTE"
+      "VIGILANTE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -2619,7 +2673,8 @@
       "BLASTER",
       "SUPERNATURAL",
       "DARK HUNTER",
-      "BRIMSTONE"
+      "BRIMSTONE",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -2649,7 +2704,8 @@
       "GLOBAL",
       "MUTANT",
       "CONTROLLER",
-      "HELLFIRE CLUB"
+      "HELLFIRE CLUB",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -2680,7 +2736,8 @@
       "MUTANT",
       "SUPPORT",
       "X-MEN",
-      "ASTRAL"
+      "ASTRAL",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -2711,7 +2768,8 @@
       "SKILL",
       "BRAWLER",
       "ASGARDIAN",
-      "SHADOW CONCLAVE"
+      "SHADOW CONCLAVE",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -2728,7 +2786,7 @@
       },
       "passive": {
         "name": "Behold My Stuff",
-        "description": "Characters killed by Executioner cannot be revived.\n\nWhen an enemy attacks this character or a SHADOW CONCLAVE ally, attack that enemy for 300% damage.\n\nIn WAR, with 3 SHADOW CONCLAVE allies:\n > Before this character completes a turn, this character and all SHADOW CONCLAVE allies cannot gain Silence.\n > Enemies cannot gain Immunity.\n > Damage Reduction cannot be increased or decreased by any character for themselves, allies, or enemies except by positive or negative effects.\n > Enemy Damage can only be increased by positive effects and allied Damage can only be decreased by negative effects."
+        "description": "Characters killed by Executioner cannot be revived.\n\nWhen an enemy attacks this character or a SHADOW CONCLAVE ally, attack that enemy for 300% Piercing.\n\nIn WAR, with 3 SHADOW CONCLAVE allies:\n > Before this character completes a turn, this character and all SHADOW CONCLAVE allies cannot gain Silence.\n > Enemies cannot gain Immunity.\n > Damage Reduction cannot be increased or decreased by any character for themselves, allies, or enemies except by positive or negative effects.\n > Enemy Damage can only be increased by positive effects and allied Damage can only be decreased by negative effects."
       }
     }
   },
@@ -2743,7 +2801,8 @@
       "BLASTER",
       "POWER ARMOR",
       "MIGHTY AVENGER",
-      "UNCANNY AVENGER"
+      "UNCANNY AVENGER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -2773,7 +2832,8 @@
       "GLOBAL",
       "TECH",
       "SUPPORT",
-      "LIBERTY"
+      "LIBERTY",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -2893,7 +2953,8 @@
       "COSMIC",
       "BIO",
       "CONTROLLER",
-      "FANTASTIC FOUR (MCU)"
+      "FANTASTIC FOUR (MCU)",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -2987,7 +3048,8 @@
       "TECH",
       "CONTROLLER",
       "PYM TECH",
-      "THUNDERBOLT"
+      "THUNDERBOLT",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -3267,7 +3329,8 @@
       "BIO",
       "SUPPORT",
       "GUARDIAN",
-      "STARJAMMER"
+      "STARJAMMER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -3500,7 +3563,8 @@
       "MYSTIC",
       "BRAWLER",
       "NEW WARRIOR",
-      "RETCON"
+      "RETCON",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -3757,7 +3821,8 @@
       "MUTANT",
       "BLASTER",
       "X-MEN",
-      "STARJAMMER"
+      "STARJAMMER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -3849,7 +3914,8 @@
       "MYSTIC",
       "CONTROLLER",
       "ASGARDIAN",
-      "UNDYING"
+      "UNDYING",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -3879,7 +3945,8 @@
       "GLOBAL",
       "SKILL",
       "BRAWLER",
-      "BRIMSTONE"
+      "BRIMSTONE",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -3909,7 +3976,8 @@
       "COSMIC",
       "MYSTIC",
       "BRAWLER",
-      "ACCURSED"
+      "ACCURSED",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -3940,7 +4008,8 @@
       "MYSTIC",
       "PROTECTOR",
       "MIGHTY AVENGER",
-      "UNCANNY AVENGER"
+      "UNCANNY AVENGER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -3970,7 +4039,8 @@
       "COSMIC",
       "TECH",
       "SUPPORT",
-      "SHADOW CONCLAVE"
+      "SHADOW CONCLAVE",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -4000,7 +4070,8 @@
       "CITY",
       "SKILL",
       "BLASTER",
-      "VIGILANTE"
+      "VIGILANTE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -4032,7 +4103,8 @@
       "CONTROLLER",
       "SPIDER-VERSE",
       "SINISTER SIX",
-      "INSIDIOUS SIX"
+      "INSIDIOUS SIX",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -4062,7 +4134,8 @@
       "COSMIC",
       "TECH",
       "BLASTER",
-      "STARJAMMER"
+      "STARJAMMER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -4153,7 +4226,8 @@
       "COSMIC",
       "BIO",
       "BLASTER",
-      "FANTASTIC FOUR (MCU)"
+      "FANTASTIC FOUR (MCU)",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -4411,7 +4485,8 @@
       "BIO",
       "PROTECTOR",
       "ETERNAL",
-      "THUNDERBOLT"
+      "THUNDERBOLT",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -4584,7 +4659,8 @@
       "PROTECTOR",
       "FANTASTIC FOUR",
       "MIGHTY AVENGER",
-      "LEGENDARY"
+      "LEGENDARY",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -4614,7 +4690,8 @@
       "COSMIC",
       "BIO",
       "BRAWLER",
-      "FANTASTIC FOUR (MCU)"
+      "FANTASTIC FOUR (MCU)",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -4646,7 +4723,8 @@
       "BRAWLER",
       "DEFENDER",
       "HEROES FOR HIRE",
-      "IMMORTAL WEAPON"
+      "IMMORTAL WEAPON",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -4678,7 +4756,8 @@
       "MYSTIC",
       "SUPPORT",
       "INVADER",
-      "IMMORTAL WEAPON"
+      "IMMORTAL WEAPON",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -4709,7 +4788,8 @@
       "TECH",
       "BLASTER",
       "POWER ARMOR",
-      "ABSOLUTE A-FORCE"
+      "ABSOLUTE A-FORCE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -4896,7 +4976,8 @@
       "SUPPORT",
       "X-MEN",
       "IMMORTAL X-MEN",
-      "UNCANNY AVENGER"
+      "UNCANNY AVENGER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -4926,7 +5007,8 @@
       "GLOBAL",
       "BIO",
       "CONTROLLER",
-      "RETCON"
+      "RETCON",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -4958,7 +5040,8 @@
       "CONTROLLER",
       "DEFENDER",
       "A-FORCE",
-      "DARING WARRIOR"
+      "DARING WARRIOR",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -4971,7 +5054,7 @@
       },
       "ultimate": {
         "name": "Rejection",
-        "description": "Attack primary and adjacent targets for 400% damage + clear all positive effects.\n\nApply +1 Defense Up, up to a max of 3 turns, to self and all A-FORCE and DARING WARRIOR allies.\n\nCall an assist from the A-FORCE or DARING WARRIOR ally with the highest Damage.\n\nGenerate 1 Ability Energy for this character.\n\nGain +100,000% Extra Focus for this attack."
+        "description": "Attack primary and adjacent targets for 500% damage + clear all positive effects.\n\nApply +1 Defense Up, up to a max of 3 turns, to self and all A-FORCE and DARING WARRIOR allies.\n\nCall an assist from the A-FORCE or DARING WARRIOR ally with the highest Damage.\n\nGenerate 1 Ability Energy for this character.\n\nGain +100,000% Extra Focus for this attack."
       },
       "passive": {
         "name": "Denial",
@@ -4989,24 +5072,26 @@
       "MUTANT",
       "CONTROLLER",
       "ASTONISHING X-MEN",
-      "LEGENDARY"
+      "LEGENDARY",
+      "EXALTED X-MEN",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
         "name": "Firework Blast",
-        "description": "Attack primary target for 290% damage + 70% chance to apply Blind.\nIn RAIDS, always apply Blind."
+        "description": "Attack primary target for 290% damage + if this character has 3 or more EXALTED X-MEN, apply Blind.\n\nWhen forced to attack an EXALTED X-MEN ally, this character deals less damage and this attack will not reduce the Max Health of the target."
       },
       "special": {
         "name": "Plasmoid Party",
-        "description": "Apply Offense Up to self and all X-MEN allies.\n\nAttack primary target for 300% damage.\nGain an assist at 50% Damage from all ASTONISHING X-MEN allies.\nCall 2 random non-summoned, non-ASTONISHING X-MEN allies, at 50% Damage, to attack the primary target.\nThis attack is unavoidable and cannot be Blocked.\n\nOn Kill, spread 3 negative effects from the primary target to all other enemies. This will not spread Stun."
+        "description": "Apply Offense Up to self and all X-MEN allies.\n\nAttack primary target for 300% damage.\nGain an assist from 3 random X-MEN allies.\n\nOn Kill, spread 3 negative effects from the primary target to all other enemies. This will not spread Stun.\n\nThis attack is Unavoidable and cannot be Blocked."
       },
       "ultimate": {
         "name": "Splitting Atoms",
-        "description": "Attack primary target for 400% damage + 50% Piercing + reduce Speed Bar by 25% + apply Stun.\nAttack all other enemies for 200% damage + 50% Piercing.\n\nApply +1 Slow to all enemies.\nApply Offense Down for 2 turns to all enemies."
+        "description": "In CRUCIBLE, if this character has 3 EXALTED X-MEN allies, reduce Immunity by 2 on the primary target.\n\nAttack primary target for 300% Piercing + reduce Speed Bar by 25% + apply Stun.\nAttack all other enemies for 300% Piercing.\n\nApply +1 Slow to all enemies."
       },
       "passive": {
         "name": "Mall Rat",
-        "description": "When an ASTONISHING X-MEN ally drops below 50% Health, fill an ally Beast Speed Bar by 30% + generate an Ability Energy for a random allied Beast.\n\nOn enemy Death, fill all ASTONISHING X-MEN allies' Speed Bar by 25%.\n\nOn this character's and each X-MEN ally's turn, apply Assist Now to either self or a random X-MEN ally.\n\nGain +30% Max Health. X-MEN allies gain +15% Max Health.\nASTONISHING X-MEN allies gain an additional +15% Max Health.\n\nIn RAIDS:\n > Gain +20% Speed.\n > ASTONISHING X-MEN allies gain +20% Speed.\n > Gain +40% Damage.\n > ASTONISHING X-MEN allies gain +40% Damage."
+        "description": "On enemy Death, fill self and all EXALTED X-MEN allies' Speed Bar by 25%.\n\nOn this character's and each X-MEN ally's turn, apply Assist Now to either self or a random X-MEN ally.\n\nWhenever this character drops below 50% Health:\n > Apply Offense Up to 1 random Wolverine ally.\n > Generate 1 Ability Energy to 1 random Wolverine ally.\n\nWhen this character or any non-SUPPORT EXALTED X-MEN ally drops below 50% Max Health:\n > Apply Defense Up for 1 turn and Stealth for 2 turns to that character.\n > In CRUCIBLE, Barrier and Heal that character for 15% of this character's Max Health."
       }
     }
   },
@@ -5020,7 +5105,8 @@
       "MYSTIC",
       "PROTECTOR",
       "BROTHERHOOD",
-      "ACCURSED"
+      "ACCURSED",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -5050,7 +5136,8 @@
       "COSMIC",
       "MYSTIC",
       "CONTROLLER",
-      "ABSOLUTE A-FORCE"
+      "ABSOLUTE A-FORCE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -5293,7 +5380,8 @@
       "COSMIC",
       "MYSTIC",
       "CONTROLLER",
-      "SYMBIOTE"
+      "SYMBIOTE",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -5610,7 +5698,8 @@
       "BRAWLER",
       "IMMORTAL WEAPON",
       "THUNDERBOLT",
-      "HAND"
+      "HAND",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -5671,7 +5760,8 @@
       "COSMIC",
       "SKILL",
       "PROTECTOR",
-      "STARJAMMER"
+      "STARJAMMER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -5701,7 +5791,8 @@
       "GLOBAL",
       "MYSTIC",
       "PROTECTOR",
-      "BRIMSTONE"
+      "BRIMSTONE",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -5910,7 +6001,8 @@
       "MUTANT",
       "CONTROLLER",
       "MARAUDER",
-      "HELLFIRE CLUB"
+      "HELLFIRE CLUB",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -5940,7 +6032,8 @@
       "GLOBAL",
       "BIO",
       "BRAWLER",
-      "GAMMA"
+      "GAMMA",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -5949,11 +6042,11 @@
       },
       "special": {
         "name": "Silver Spoils",
-        "description": "Attack primary and adjacent targets for 450% damage + flip all positive effects into negative effects.\n\nBarrier self for 30% of this character's Max Health and gain Speed Up.\n\nFor enemies with Wrath:\n > Apply the following negative effects for 2 turns: 2 Bleed, Defense Down, and Trauma.\n > Deal 10% of this character's Max Health as damage."
+        "description": "Attack primary and adjacent targets for 450% Piercing + flip all positive effects into negative effects.\n\nBarrier self for 30% of this character's Max Health and gain Speed Up.\n\nFor enemies with Wrath:\n > Apply the following negative effects for 2 turns: 2 Bleed, Defense Down, and Trauma.\n > Deal 10% of this character's Max Health as damage."
       },
       "ultimate": {
         "name": "Broken Storm",
-        "description": "Clear Barrier on all enemies.\n\nAttack all enemies for 400% Piercing + prolong the duration of all negative effects by 1, except for Ability Block, Bleed, and Stun.\n\nGain Speed Up for 2 turns and Safeguard for  for 2 turns.\n\nFor enemies with Wrath, apply 3 Bleed and Defense Down before the attack.\n\nThis attack ignores Defense Up and enemies killed by this attack cannot be Revived. "
+        "description": "Clear Barrier on all enemies.\n\nAttack all enemies for 400% Piercing + prolong the duration of all negative effects by 1, except for Ability Block, Bleed, and Stun.\n\nGain Speed Up for 2 turns and Safeguard for 2 turns.\n\nFor enemies with Wrath, apply 3 Bleed and Defense Down before the attack.\n\nThis attack ignores Defense Up and enemies killed by this attack cannot be Revived. "
       },
       "passive": {
         "name": "Trophy Tyrant",
@@ -5971,7 +6064,8 @@
       "MUTANT",
       "SUPPORT",
       "UNCANNY X-MEN",
-      "NEW MUTANT"
+      "NEW MUTANT",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -6034,7 +6128,8 @@
       "MUTANT",
       "BLASTER",
       "PHOENIX FORCE",
-      "EPIC"
+      "EPIC",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -6064,7 +6159,8 @@
       "COSMIC",
       "BIO",
       "CONTROLLER",
-      "SHADOW CONCLAVE"
+      "SHADOW CONCLAVE",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -6094,7 +6190,8 @@
       "GLOBAL",
       "MYSTIC",
       "PROTECTOR",
-      "NIGHTSTALKER"
+      "NIGHTSTALKER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -6216,7 +6313,8 @@
       "BIO",
       "BRAWLER",
       "ABSOLUTE A-FORCE",
-      "INHUMAN"
+      "INHUMAN",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -6417,7 +6515,8 @@
       "COSMIC",
       "SUPPORT",
       "TECH",
-      "KREE"
+      "KREE",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -6509,7 +6608,8 @@
       "SKILL",
       "SUPPORT",
       "INFINITY WATCH",
-      "ASTRAL"
+      "ASTRAL",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -6541,7 +6641,8 @@
       "CONTROLLER",
       "INHUMAN",
       "ABSOLUTE A-FORCE",
-      "CHAMPION"
+      "CHAMPION",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -6572,7 +6673,8 @@
       "MYSTIC",
       "BRAWLER",
       "SHADOWLAND",
-      "NIGHTSTALKER"
+      "NIGHTSTALKER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -6689,6 +6791,37 @@
     }
   },
   {
+    "id": "Morph",
+    "name": "Morph",
+    "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_Morph_a8e2ad67.png",
+    "traits": [
+      "HERO",
+      "GLOBAL",
+      "MUTANT",
+      "BRAWLER",
+      "EXALTED X-MEN",
+      "FEAR"
+    ],
+    "abilities": {
+      "basic": {
+        "name": "Copying Strike",
+        "description": "Attack primary target for 320% damage + copy 3 random positive effects, excluding Taunt and Regeneration, from the primary target.\n\nWhen forced to attack an EXALTED X-MEN ally, this character deals less damage and this attack will not reduce the Max Health of the target."
+      },
+      "special": {
+        "name": "Morphing Time",
+        "description": "Gain 5% damage per positive effect on the primary target.\n\nAttack primary target for 100% damage + apply Bleed and Heal Block for 2 turns + copy 1 random positive effect, excluding Taunt and Regeneration.\n\nOn CRUCIBLE DEFENSE, this attack targets the enemy with the highest Focus.\n\nRepeat this attack 3 times.\n\nIf this character has 3 X-MEN allies, this attack gains 100% Crit Chance.\nIn CRUCIBLE, this attack deals double damage. "
+      },
+      "ultimate": {
+        "name": "Steelclad Replica",
+        "description": "Copy all positive effects, except Taunt and Regeneration, from primary and adjacent targets, Safeguard can be copied by this ability.\n\nAttack primary and adjacent targets for 350% damage + 25% damage per positive effect on self and the primary target."
+      },
+      "passive": {
+        "name": "Body Double",
+        "description": "Before this character takes a turn:\n > On enemy Taunt, apply Taunt for 2 turns on all enemies, this gains +500% Extra Focus.\n > Enemies cannot gain Offense Up.\n\nOn any turn, if this character has Darkness, flip Darkness to Safeguard. If this character has 3 EXALTED X-MEN allies, if an EXALTED X-MEN ally has Darkness, flip Darkness to Safeguard on all X-MEN allies.\n\nIf this character has 3 EXALTED X-MEN allies:\n > This character cannot gain Silence or Disrupted.\n > In CRUCIBLE, enemies cannot fill or reduce Speed Bar for themselves, allies, or enemies (this does not apply to Speed Bar gained through normal means).\n > In CRUCIBLE, enemies cannot have their Speed increased except by positive effects.\n > In CRUCIBLE, the Speed of allies can only be reduced by Slow."
+      }
+    }
+  },
+  {
     "id": "MrFantastic",
     "name": "Mister Fantastic",
     "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_MrFantastic_6cb887bf.png",
@@ -6728,7 +6861,8 @@
       "COSMIC",
       "BIO",
       "PROTECTOR",
-      "FANTASTIC FOUR (MCU)"
+      "FANTASTIC FOUR (MCU)",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -6821,7 +6955,8 @@
       "BRAWLER",
       "INHUMAN",
       "YOUNG AVENGER",
-      "CHAMPION"
+      "CHAMPION",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -6852,7 +6987,8 @@
       "BIO",
       "SUPPORT",
       "KREE",
-      "ABSOLUTE A-FORCE"
+      "ABSOLUTE A-FORCE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -7120,7 +7256,8 @@
       "MUTANT",
       "BLASTER",
       "X-FORCE",
-      "SECRET WARRIOR"
+      "SECRET WARRIOR",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -7303,7 +7440,8 @@
       "CITY",
       "TECH",
       "CONTROLLER",
-      "DARING WARRIOR"
+      "DARING WARRIOR",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -7312,7 +7450,7 @@
       },
       "special": {
         "name": "Boardslide Beatdown",
-        "description": "Attack primary target and all enemies in that character's row for 300% damage + apply Bleed and Defense Down.\n\nApply 2 Deflect and 2 Deathproof to self and all allies."
+        "description": "Attack primary target and all enemies in that character's row for 300% damage + apply 2 Bleed and Defense Down.\n\nApply 2 Deflect and 2 Deathproof to self and all allies.\n\nIn CRUCIBLE or BATTLEWORLD, if this character has 3 DARING WARRIOR allies, this attack does an additional 100% damage."
       },
       "ultimate": {
         "name": "Daring Demolition",
@@ -7457,7 +7595,8 @@
       "BIO",
       "PROTECTOR",
       "STARJAMMER",
-      "CHAMPION"
+      "CHAMPION",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -7488,7 +7627,8 @@
       "MYSTIC",
       "CONTROLLER",
       "VAMPIRE",
-      "NIGHTSTALKER"
+      "NIGHTSTALKER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -7617,7 +7757,8 @@
       "CONTROLLER",
       "WEAPON X",
       "LEGENDARY",
-      "WINTER GUARD"
+      "WINTER GUARD",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -7648,7 +7789,8 @@
       "MUTANT",
       "BRAWLER",
       "PHOENIX FORCE",
-      "EPIC"
+      "EPIC",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -7739,7 +7881,8 @@
       "GLOBAL",
       "BIO",
       "BRAWLER",
-      "LIBERTY"
+      "LIBERTY",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -7769,7 +7912,8 @@
       "GLOBAL",
       "SKILL",
       "CONTROLLER",
-      "LIBERTY"
+      "LIBERTY",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -7863,7 +8007,8 @@
       "CITY",
       "MYSTIC",
       "BLASTER",
-      "SECRET WARRIOR"
+      "SECRET WARRIOR",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -7895,7 +8040,8 @@
       "CONTROLLER",
       "UNCANNY X-MEN",
       "PHOENIX FORCE",
-      "LEGENDARY"
+      "LEGENDARY",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -7988,7 +8134,8 @@
       "CONTROLLER",
       "MUTANT",
       "X-FACTOR",
-      "IMMORTAL X-MEN"
+      "IMMORTAL X-MEN",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -8080,7 +8227,8 @@
       "SKILL",
       "BLASTER",
       "MILITARY",
-      "VIGILANTE"
+      "VIGILANTE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -8184,7 +8332,7 @@
   },
   {
     "id": "PVE_Boss_Maestro",
-    "name": "PVE_Boss_Maestro",
+    "name": "Maestro",
     "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_PVE_Boss_Maestro_9560b33f.png",
     "traits": [
       "VILLAIN",
@@ -8205,7 +8353,7 @@
         "description": "Attack all enemies for 200% damage + apply Slow for 3 turns. \nBonus Attack all enemies for 300% damage + apply Silence. \n\nThis attack reduces the Max Health of the target by 25% of the damage dealt.\n\nGain +20 Rage.\n\nThis attack cannot be dodged."
       },
       "passive": {
-        "description": "On Spawn, apply Wrath to the enemy with the most Health.\nOn Revive, gain +20 Rage.\n\nOn any Turn:\n > If more than 1 enemy has Wrath, clear Wrath from all enemies.\n > If no enemy has Wrath, apply Wrath to the enemy with the most health.\n\nOn enemy Turn, fill Speed Bar by 35% + gain +1 Rage.\n\nOn Stun, Ability Block, or Blind:\n > Clear that negative effect and gain + Rage.\n\nThis character cannot gain Trauma, Exhausted, Exposed, Regeneration, Stealth, Darkness, Silence, Slow, and is immune to Speed Bar reductions, Speed Stat reductions, and attacks that deal damage based on Maestro's Max Health.\nEnemies cannot gain Deathproof, Immunity, Safeguard, Charged, and cannot be Revived.\n\nWhen this character has 100 Rage, this character will ENRAGE, ending the match."
+        "description": "On Spawn, apply Wrath to the enemy with the most Health.\nOn Revive, gain +20 Rage.\n\nOn any Turn:\n > If more than 1 enemy has Wrath, clear Wrath from all enemies.\n > If no enemy has Wrath, apply Wrath to the enemy with the most health.\n\nOn enemy Turn, fill Speed Bar by 35% + gain +1 Rage.\n\nOn Stun, Ability Block, or Blind:\n > Clear that negative effect and gain +10 Rage.\n\nThis character cannot gain Trauma, Exhausted, Exposed, Regeneration, Stealth, Darkness, Silence, Slow, and is immune to Speed Bar reductions, Speed Stat reductions, and attacks that deal damage based on Maestro's Max Health.\nEnemies cannot gain Deathproof, Immunity, Safeguard, Charged, and cannot be Revived.\n\nWhen this character has 100 Rage, this character will ENRAGE, ending the match."
       }
     }
   },
@@ -9256,7 +9404,8 @@
       "CONTROLLER",
       "S.H.I.E.L.D.",
       "INHUMAN",
-      "SECRET WARRIOR"
+      "SECRET WARRIOR",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -9288,6 +9437,7 @@
       "BRAWLER",
       "GALACTIC COUNCIL",
       "LEGENDARY",
+      "TERROR",
       "DARK PROMOTION"
     ],
     "abilities": {
@@ -9349,7 +9499,8 @@
       "MUTANT",
       "BLASTER",
       "HELLFIRE CLUB",
-      "IMMORTAL X-MEN"
+      "IMMORTAL X-MEN",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -9548,7 +9699,8 @@
       "SKILL",
       "PROTECTOR",
       "MILITARY",
-      "WINTER GUARD"
+      "WINTER GUARD",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -9704,7 +9856,8 @@
       "TECH",
       "BLASTER",
       "GUARDIAN",
-      "STARJAMMER"
+      "STARJAMMER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -9860,7 +10013,8 @@
       "SKILL",
       "PROTECTOR",
       "SECRET AVENGER",
-      "LIBERTY"
+      "LIBERTY",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -9920,7 +10074,8 @@
       "COSMIC",
       "MYSTIC",
       "SUPPORT",
-      "ACCURSED"
+      "ACCURSED",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -9983,7 +10138,8 @@
       "CONTROLLER",
       "SUPERNATURAL",
       "DARKHOLD",
-      "MIGHTY AVENGER"
+      "MIGHTY AVENGER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -10047,7 +10203,8 @@
       "SPIDER-VERSE",
       "SINISTER SIX",
       "INSIDIOUS SIX",
-      "INFESTATION"
+      "INFESTATION",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -10108,7 +10265,8 @@
       "GLOBAL",
       "MUTANT",
       "PROTECTOR",
-      "HELLFIRE CLUB"
+      "HELLFIRE CLUB",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -10217,7 +10375,8 @@
       "HERO",
       "GLOBAL",
       "BIO",
-      "BLASTER"
+      "BLASTER",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -10279,6 +10438,7 @@
       "CONTROLLER",
       "ASTRAL",
       "LEGENDARY",
+      "ANXIETY",
       "DARK PROMOTION"
     ],
     "abilities": {
@@ -10400,7 +10560,8 @@
       "BIO",
       "PROTECTOR",
       "GAMMA",
-      "RETCON"
+      "RETCON",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -10631,7 +10792,8 @@
       "TECH",
       "BLASTER",
       "SPIDER-VERSE",
-      "SINISTER SIX"
+      "SINISTER SIX",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -10725,7 +10887,8 @@
       "BLASTER",
       "MERCENARY",
       "SPIDER-VERSE",
-      "VIGILANTE"
+      "VIGILANTE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -10815,7 +10978,8 @@
       "GLOBAL",
       "BIO",
       "BLASTER",
-      "THUNDERBOLT"
+      "THUNDERBOLT",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -10845,7 +11009,8 @@
       "GLOBAL",
       "BIO",
       "BRAWLER",
-      "DARING WARRIOR"
+      "DARING WARRIOR",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -11160,7 +11325,8 @@
       "BIO",
       "SUPPORT",
       "YOUNG AVENGER",
-      "RETCON"
+      "RETCON",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -11222,7 +11388,8 @@
       "CONTROLLER",
       "GUARDIAN",
       "GALACTIC COUNCIL",
-      "LEGENDARY"
+      "LEGENDARY",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -11313,7 +11480,8 @@
       "GLOBAL",
       "MYSTIC",
       "CONTROLLER",
-      "IMMORTAL WEAPON"
+      "IMMORTAL WEAPON",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -11345,7 +11513,8 @@
       "CONTROLLER",
       "UNCANNY X-MEN",
       "IMMORTAL X-MEN",
-      "UNCANNY AVENGER"
+      "UNCANNY AVENGER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -11367,6 +11536,37 @@
     }
   },
   {
+    "id": "StormMighty",
+    "name": "Storm (Mighty)",
+    "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_StormMighty_88e12023.png",
+    "traits": [
+      "HERO",
+      "GLOBAL",
+      "MUTANT",
+      "BLASTER",
+      "EXALTED X-MEN",
+      "FEAR"
+    ],
+    "abilities": {
+      "basic": {
+        "name": "Frigid Blow",
+        "description": "Attack primary target for 320% damage + apply 2 Bleed for 1 turn and Heal Block for 2 turns.\n\nWhen forced to attack an EXALTED X-MEN ally, this character deals less damage and this attack will not reduce the Max Health of the target."
+      },
+      "special": {
+        "name": "Icicle Crash",
+        "description": "Reduce the duration of Deathproof by 2 on primary and adjacent targets that have Exposed.\nAttack primary and adjacent targets for 300% Piercing.\n\nReduce the duration of Immunity on primary and adjacent targets by 2 + apply Slow for 2 turns and Heal Block for 2 turns.\n\nThis attack is Unavoidable and ignores Defense Up."
+      },
+      "ultimate": {
+        "name": "Cosmic Tempest",
+        "description": "Apply Exposed to all enemies.\nClear Revive Once from all enemies.\n\nAttack all enemies for 400% damage + reduce the duration of Immunity by 2 + apply Slow for 2 turns.\n\nIn CRUCIBLE, if this character has 3 EXALTED X-MEN allies, apply Stun to 2 enemies with the highest Speed.\n\nGain +500% Extra Focus for this attack.\nThis attack cannot be Dodged or blocked."
+      },
+      "passive": {
+        "name": "Weather Goddess",
+        "description": "Enemies killed by this character cannot be revived.\n\nWhenever an enemy with Exposed is attacked, reduce Immunity by 2 for that enemy, this action gains +500% Extra Focus.\n\nOn enemy Turn with, if that character has Exposed:\n > Attack that character for 250% Piercing.\n > In CRUCIBLE, reduce Immunity by 2, apply Silence, and if the target is MUTANT, apply Ability Block.\n\nIn CRUCIBLE, if this character has 3 EXALTED X-MEN allies, enemies cannot become Empowered.\n\nIn CRUCIBLE:\n > If this character has 3 EXALTED X-MEN, until this character takes a turn enemies cannot gain Defense Up.\n > On Spawn, apply Exposed to all CONTROLLER enemies, this gains +500% Extra Focus.\n > Lower Damage and Resistance by 50%, down to a minimum of 50% on enemies with Exposed.\n > Lower Armor by 100% on enemies with Exposed"
+      }
+    }
+  },
+  {
     "id": "StrangeSupreme",
     "name": "Strange (Heartless)",
     "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_StrangeSupreme_514d1e83.png",
@@ -11376,7 +11576,8 @@
       "MYSTIC",
       "BLASTER",
       "DARKHOLD",
-      "BRIMSTONE"
+      "BRIMSTONE",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -11468,7 +11669,8 @@
       "MUTANT",
       "BLASTER",
       "X-TREME X-MEN",
-      "NEW MUTANT"
+      "NEW MUTANT",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -11501,7 +11703,8 @@
       "SPIDER-VERSE",
       "SINISTER SIX",
       "INSIDIOUS SIX",
-      "SUPERIOR SIX"
+      "SUPERIOR SIX",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -11595,7 +11798,8 @@
       "MYSTIC",
       "BRAWLER",
       "IMMORTAL WEAPON",
-      "MIGHTY AVENGER"
+      "MIGHTY AVENGER",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -11659,7 +11863,8 @@
       "CONTROLLER",
       "BIFROST",
       "ASGARDIAN",
-      "SHADOW CONCLAVE"
+      "SHADOW CONCLAVE",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -11755,7 +11960,8 @@
       "CONTROLLER",
       "MERCENARY",
       "UNDERWORLD",
-      "THUNDERBOLT"
+      "THUNDERBOLT",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -11816,7 +12022,8 @@
       "MYSTIC",
       "PROTECTOR",
       "BLACK ORDER",
-      "SHADOW CONCLAVE"
+      "SHADOW CONCLAVE",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -11876,7 +12083,8 @@
       "GLOBAL",
       "MYSTIC",
       "BLASTER",
-      "ACCURSED"
+      "ACCURSED",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -11938,7 +12146,8 @@
       "BIO",
       "BRAWLER",
       "FANTASTIC FOUR (MCU)",
-      "NEW AVENGER"
+      "NEW AVENGER",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -12033,7 +12242,8 @@
       "SUPPORT",
       "ASGARDIAN",
       "GALACTIC COUNCIL",
-      "LEGENDARY"
+      "LEGENDARY",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -12395,7 +12605,8 @@
       "SPIDER-VERSE",
       "YOUNG AVENGER",
       "WEB-WARRIOR",
-      "CHAMPION"
+      "CHAMPION",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -12455,7 +12666,8 @@
       "GLOBAL",
       "MUTANT",
       "PROTECTOR",
-      "WINTER GUARD"
+      "WINTER GUARD",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -12745,7 +12957,8 @@
       "TECH",
       "SUPPORT",
       "S.H.I.E.L.D.",
-      "THUNDERBOLT"
+      "THUNDERBOLT",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -12776,7 +12989,8 @@
       "TECH",
       "CONTROLLER",
       "BIONIC AVENGER",
-      "MIGHTY AVENGER"
+      "MIGHTY AVENGER",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -12860,7 +13074,8 @@
       "TECH",
       "BRAWLER",
       "SPIDER-VERSE",
-      "SINISTER SIX"
+      "SINISTER SIX",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -12891,7 +13106,8 @@
       "TECH",
       "CONTROLLER",
       "X-MEN",
-      "NEW MUTANT"
+      "NEW MUTANT",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -12924,7 +13140,8 @@
       "AVENGER",
       "MILITARY",
       "POWER ARMOR",
-      "LIBERTY"
+      "LIBERTY",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -12955,7 +13172,8 @@
       "TECH",
       "BLASTER",
       "PYM TECH",
-      "ABSOLUTE A-FORCE"
+      "ABSOLUTE A-FORCE",
+      "ANXIETY"
     ],
     "abilities": {
       "basic": {
@@ -13048,7 +13266,8 @@
       "MUTANT",
       "BRAWLER",
       "X-MEN",
-      "NEW MUTANT"
+      "NEW MUTANT",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -13080,24 +13299,26 @@
       "BRAWLER",
       "UNCANNY X-MEN",
       "WEAPON X",
-      "ALPHA FLIGHT"
+      "ALPHA FLIGHT",
+      "EXALTED X-MEN",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
         "name": "Adamantium Claws",
-        "description": "Attack primary target for 260% Piercing + apply 2 Bleed.\n\nGain Speed Up.\n\nIn RAIDS and on WAR DEFENSE, apply Disrupted to primary target."
+        "description": "Attack primary target for 260% Piercing + apply 2 Bleed and Disrupted.\n\nGain Speed Up.\n\nWhen forced to attack an EXALTED X-MEN ally, this character deals less damage and this attack will not reduce the Max Health of the target."
       },
       "special": {
         "name": "Slice and Dice",
-        "description": "Attack primary target for 400% Piercing + apply 2 Bleed.\n\nRebound Chain to 5 targets for 120% Piercing + apply 2 Bleed.\nGain +100% Crit Chance on each secondary target.\n\nThis attack cannot be counterattacked and cannot be blocked."
+        "description": "Attack primary target for 300% Piercing + apply Bleed.\n\nRebound Chain to 5 targets for 300% Piercing + apply Bleed.\n\nThis attack cannot be counterattacked, cannot miss and cannot be blocked."
       },
       "ultimate": {
         "name": "Primal Berserker",
-        "description": "If this character's Health is below 50%, gain Offense Up for 2 turns.\n\nAttack primary target for 800% Piercing + apply 2 Bleed.\n\nIf Omega Red, Colossus, or Sasquatch is an ally:\n > Always gain Offense Up for 2 turns.\n > Clear Deathproof from the primary target.\n\nOn Kill, repeat this attack targeting the most injured enemy.\n\nThis attack is Unavoidable and cannot be blocked."
+        "description": "Gain Offense Up for 2 turns.\n\nReduce Deathproof from the primary target by 2. Attack primary target for 400% Piercing + apply 2 Bleed.\n\nOn Kill, repeat this attack targeting the most injured enemy.\n\nThis attack is Unavoidable and cannot be blocked.\n\nEnemies killed by this attack cannot be revived."
       },
       "passive": {
         "name": "Healing Factor",
-        "description": "On Turn, Heal for 20% of this character's Max Health.\n\nWhen this character drops below 60% Health, gain Defense Up and 2 Deathproof.\n\nWhile this character is below 50% Health, gain +100% Block Chance.\n\nOn Death, 25% chance to Revive with 50% of this character's Max Health.\n\nGain +5% Speed per UNCANNY X-MEN or WEAPON X ally. This is applied after any character has taken an action.\n\nIn RAIDS and on WAR DEFENSE:\n > While this character has Deathproof and does not have Exhausted, this character and all ALPHA FLIGHT allies, gain +200% Resistance.\n > On enemy Death, prolong the duration of all negative effects, except Trauma, Stun, and Ability Block, on all enemies by +1, up to a maximum of 3.\n > If this character has 3 or more ALPHA FLIGHT allies, enemy characters cannot gain Stealth."
+        "description": "On Turn:\n > Heal for 20% of this character's Max Health.\n > In CRUCIBLE, extend all positive effects on all Morph allies by 1, up to 3\n\nWhile this character is below 50% Health, gain +100% Block Chance.\n\nOn Death, 25% chance to Revive with 50% of this character's Max Health.\n\nIf this character has 3 EXALTED X-MEN allies:\n > Enemies below 50% Health cannot gain Stealth.\n > Gain +75% chance to Revive on Death.\n > Lower the Passive Assist Chance for all enemies by 100%."
       }
     }
   },
@@ -13173,7 +13394,8 @@
       "MUTANT",
       "CONTROLLER",
       "MYTHIC",
-      "X-MEN"
+      "X-MEN",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -13204,7 +13426,8 @@
       "SKILL",
       "BLASTER",
       "MILITARY",
-      "WINTER GUARD"
+      "WINTER GUARD",
+      "FEAR"
     ],
     "abilities": {
       "basic": {
@@ -13297,7 +13520,8 @@
       "PROTECTOR",
       "S.H.I.E.L.D.",
       "INHUMAN",
-      "SECRET WARRIOR"
+      "SECRET WARRIOR",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -13359,6 +13583,7 @@
       "BRAWLER",
       "UNDYING",
       "EPIC",
+      "PANIC",
       "DARK PROMOTION"
     ],
     "abilities": {
@@ -13391,6 +13616,7 @@
       "PROTECTOR",
       "UNDYING",
       "EPIC",
+      "PANIC",
       "DARK PROMOTION"
     ],
     "abilities": {
@@ -13423,7 +13649,8 @@
       "TECH",
       "CONTROLLER",
       "UNDYING",
-      "EPIC"
+      "EPIC",
+      "PANIC"
     ],
     "abilities": {
       "basic": {
@@ -13456,6 +13683,7 @@
       "SUPPORT",
       "UNDYING",
       "EPIC",
+      "PANIC",
       "DARK PROMOTION"
     ],
     "abilities": {
