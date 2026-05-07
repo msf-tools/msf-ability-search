@@ -1773,24 +1773,25 @@
       "BIO",
       "PROTECTOR",
       "BLACK ORDER",
+      "OMEN",
       "TERROR"
     ],
     "abilities": {
       "basic": {
         "name": "Devastating Cleave",
-        "description": "Attack primary and adjacent targets for 300% damage."
+        "description": "Attack primary and adjacent targets for 300% damage.\n\nGain +2 Counter, up to a maximum of 4.\n\nOn WAR OFFENSE, gain +1 Deathproof, up to a maximum of 5.\n\nOn WAR OFFENSE, when forced to attack an ally, this character deals less damage to OMEN characters and, if Silver Surfer (Breaker) is an ally, does not reduce the Max Health of that ally."
       },
       "special": {
         "name": "Obsidian Guard",
-        "description": "Clear 2 negative effects from self. If a LEGENDARY VILLAIN is an ally, clear all negative effects instead.\nGain Taunt for 2 turns + Defense Up for 2 turns + Deathproof.\nHeal for 20% of this character's Max Health."
+        "description": "Clear 2 negative effects on self.\nIf a LEGENDARY VILLAIN is an ally, clear all negative effects on self, instead.\n\nGain Taunt for 2 turns, Defense Up for 2 turns, and +2 Deathproof, up to a maximum of 5.\nHeal for 25% of Max Health.\n\nOn WAR OFFENSE, with 3 OMEN allies:\n > Call a random OMEN ally to attack the primary target.\n > Clear all negative effects on self and all OMEN allies."
       },
       "ultimate": {
         "name": "Culling the Weak",
-        "description": "Attack primary target for 550% damage + 25% additional damage per Deathproof on self.\n\nTransfer all positive effects on primary target to self."
+        "description": "Attack primary target for 550% damage + 25% Damage per Deathproof on self.\n\nCopy and clear all positive effects from primary target to self.\n\nOn WAR OFFENSE, with 3 OMEN allies, copy and clear all positive effects, excluding Taunt and Stealth, from self to each OMEN ally."
       },
       "passive": {
         "name": "Payback",
-        "description": "On Spawn, gain Defense Up for 2 turns.\nOn ally Thanos Turn, if he doesn't have the Power Stone, grant him the Power Stone + Defense Up for 2 turns.\n\nWhen an enemy attacks a LEGENDARY VILLAIN or Thanos ally, attack that enemy for 250% damage.\n\nWhen this character drops below 75%, 50%, or 25% Health, gain +1 Deathproof up to a max of 5.\n\nThe first time any character takes a turn while this character's Health is below 30% and this character has Taunt, heal for 40% of this character's Max Health.\n\nWhile this character has Regeneration, gain +1,000% Resistance.\nGain +30% Max Health. BLACK ORDER and Thanos allies gain +30% Max Health."
+        "description": "On Spawn, gain Defense Up for 2 turns.\nOn ally Thanos Turn, if he doesn't have the Power Stone, grant him the Power Stone + Defense Up for 2 turns. This character can only do this once per match.\n\nWhen an enemy attacks a BLACK ORDER or OMEN ally, attack that enemy for 300% damage.\n\nWhen this character drops below 75%, 50%, and 25% Health, gain +1 Deathproof up to a max of 5.\n\nThe first time any character takes a turn while this character has Taunt and is at or below 25% Health, Heal this character for 40% of Max Health.\n\nWhile this character has Deathproof or Regeneration, gain +1,000% Resistance.\n\nOn WAR OFFENSE, with 3 OMEN allies, on Spawn, gain Taunt for 2 turns."
       }
     }
   },
@@ -2515,24 +2516,25 @@
       "MYSTIC",
       "SUPPORT",
       "BLACK ORDER",
+      "OMEN",
       "LEGENDARY"
     ],
     "abilities": {
       "basic": {
         "name": "Needle Storm",
-        "description": "Attack primary target for 100% Piercing + Bonus Attack 3 times for 80% Piercing.\n\nApply Bleed. If the primary target is a HERO CONTROLLER, apply Bleed for 2 turns instead."
+        "description": "Attack primary target for 180% Piercing + Bonus Attack 3 times for 140% Piercing.\n\nApply 2 Bleed. If the primary target is a HERO CONTROLLER, apply 2 Bleed for 2 turns instead.\n\nOn WAR OFFENSE, when forced to attack an ally, this character deals less damage to OMEN characters, does not apply any negative effects, and, if Silver Surfer (Breaker) is an ally, does not reduce the Max Health of that ally."
       },
       "special": {
         "name": "Insidious Whisper",
-        "description": "Apply Defense Up for 2 turns to self and all allies.\nApply Counter to self, all BLACK ORDER, and Thanos allies.\nApply Offense Down for 2 turns to all enemies.\nClear all Counter, Deflect, and Minor Deflect from all enemies."
+        "description": "Apply Defense Up for 2 turns to self and all allies.\nApply Counter to self, all BLACK ORDER, and OMEN allies.\nApply Offense Down for 2 turns to all enemies.\nClear Counter, Deflect, and Minor Deflect from all enemies.\n\nOn WAR OFFENSE, if Silver Surfer (Breaker) is an ally, call him to attack the primary target."
       },
       "ultimate": {
         "name": "Forced Transfusion",
-        "description": "Steal 3% Health from all enemies and redistribute to all allies. This bypasses Heal Block.\nRepeat this attack 4 additional times.\nApply Slow to all enemies for 2 turns.\nFill Speed Bar for self and all allies by 5% per BLACK ORDER and Thanos allies.\nReduce Speed Bar for all enemies by 5% per BLACK ORDER and Thanos allies.\n\nEach attack redistributes a maximum of 25% of this character's Max Health.\n\nThis attack ignores Deathproof and passives that trigger when a character drops below a certain Health."
+        "description": "Steal 3% Health from all enemies and redistribute to all allies. This bypasses Heal Block.\nIf this character has 3 OMEN allies, flip 1 negative effect on each enemy.\nRepeat this attack 4 additional times.\n\nApply Slow for 2 turns and Trauma for 2 turns to all enemies.\n\nFill Speed Bar for self and all allies by 5% for each BLACK ORDER or OMEN ally.\nReduce Speed Bar for all enemies by 5% for each BLACK ORDER or OMEN ally.\n\nEach attack redistributes a maximum of 30% of this character's Max Health.\n\nOn WAR OFFENSE, this attack is Unavoidable."
       },
       "passive": {
         "name": "Envoy of Thanos",
-        "description": "On Spawn, gain 2 Regeneration, 2 Deathproof, and Immunity for 2 turns + fill an ally Thanos Speed Bar by 25% per BLACK ORDER ally.\nOn ally Thanos Turn, if he doesn't have the Reality Stone, Time Stone, or Soul Stone, grant him them + 2 Regeneration, 2 Deathproof, and Immunity for 2 turns. This character can only do this once per match.\n\nOn Death of an enemy HERO CONTROLLER, gain Charged, apply Immunity to all allies, and Barrier all allies for 20% of this character's Max Health.\nIf Charged, on enemy Turn, apply Ability Block to all HERO CONTROLLER enemies and then lose Charged. This cannot be dodged.\n\nGain +30% Resistance. BLACK ORDER and Thanos allies gain +30% Resistance.\nGain +20% Max Health. BLACK ORDER and Thanos allies gain +20% Max Health."
+        "description": "On Spawn:\n > Apply Regeneration for 2 turns, 2 Deathproof, and Immunity for 2 turns to self and all SUPPORT OMEN allies.\n > Generate 1 Ability Energy for self and all OMEN allies.\n\nOn ally Thanos Turn, if he doesn't have the Reality Stone, Time Stone, or Soul Stone, grant him them + Apply Regeneration for 2 turns, 2 Deathproof, and Immunity for 2 turns. This character can only do this once per match.\n\nOn WAR OFFENSE, with 3 OMEN allies:\n > Enemies cannot Passive Assist.\n > Enemies cannot have their Damage increased except by positive effects."
       }
     }
   },
@@ -5534,19 +5536,23 @@
       "CONTROLLER",
       "KREE",
       "MINION",
-      "Summon"
+      "Summon",
+      "OMEN"
     ],
     "abilities": {
       "basic": {
         "name": "Kree Sidearm",
-        "description": "Attack primary target for 270% damage. Clear 1 positive effect from the target and generate 1 Ability Energy for 1-2 allies."
+        "description": "Attack primary target for 270% damage + clear 1 positive effect.\n\nGenerate 1 Ability Energy for self or 2 random allies that were not at full energy on start of the current turn."
       },
       "special": {
         "name": "Imperial Decree",
-        "description": "Apply Assist Now to an adjacent ally. If that ally is KREE, they also gain Offense Up. Attack primary target for 530% damage."
+        "description": "Apply Assist Now to a random ally. If that ally is KREE or OMEN, apply Offense Up to that ally.\n\nAttack primary target for 540% damage."
       },
       "ultimate": null,
-      "passive": null
+      "passive": {
+        "name": "Loyalist",
+        "description": "On Turn, clear 1 negative effect from 2 allies with negative effects. If those allies are KREE or OMEN, remove an additional negative effect."
+      }
     }
   },
   {
@@ -5616,19 +5622,23 @@
       "BRAWLER",
       "KREE",
       "MINION",
-      "Summon"
+      "Summon",
+      "OMEN"
     ],
     "abilities": {
       "basic": {
         "name": "Predatory Strike",
-        "description": "Attack primary target for 270% damage + apply Bleed."
+        "description": "Attack primary target for 270% Piercing + apply 2 Bleed for 2 turns."
       },
       "special": {
         "name": "Ferocious Pursuit",
-        "description": "Attack primary target for 540% damage + apply Heal Block for 2 turns."
+        "description": "Attack primary target for 480% Piercing + apply Heal Block for 2 turns.\n\nOn WAR OFFENSE, apply Slow for 2 turns to primary target."
       },
       "ultimate": null,
-      "passive": null
+      "passive": {
+        "name": "Hunter-Killer",
+        "description": "On Crit, heal self for 15% of Max Health and generate 1 Ability Energy for 1-2 random KREE allies.\n\nGain +25% Crit Chance.\nGain +5% Crit Chance per KREE MINION ally."
+      }
     }
   },
   {
@@ -6516,24 +6526,25 @@
       "SUPPORT",
       "TECH",
       "KREE",
+      "OMEN",
       "TERROR"
     ],
     "abilities": {
       "basic": {
         "name": "Bio-Weapon",
-        "description": "Attack primary target for 200% damage + apply Bleed.\n\n Apply Regeneration to the most injured non-summoned ally."
+        "description": "Attack primary target for 280% damage + apply 2 Bleed for 2 turns.\n\nApply 2 Regeneration for 2 turns to the most injured non-summoned ally.\n\nOn WAR OFFENSE, when forced to attack an ally, this character deals less damage to OMEN characters, does not apply any negative effects, and, if Silver Surfer (Breaker) is an ally, does not reduce the Max Health of that ally."
       },
       "special": {
         "name": "Genetic Reconstruction",
-        "description": "Heal most injured ally for 5,000 Health + 15% of this character's Max Health.\n\nGenerate Ability Energy to a random KREE ally.\n\nRevive dead ally with 40% Max Health + apply 2 Deathproof.\n\n"
+        "description": "Revive dead ally with 50% Max Health + apply 2 Deathproof and 2 Deflect to that ally.\n\nHeal the most injured ally for 35% of this character's Max Health.\n\nGenerate 1 Ability Energy for 2 random KREE or OMEN allies.\n\nOn WAR OFFENSE, if Silver Surfer (Breaker) is an ally, call him to attack the primary target. If Silver Surfer (Breaker) is not an ally, call the OMEN ally with the highest Damage to attack the primary target."
       },
       "ultimate": {
         "name": "Mass Phlebotomy",
-        "description": "Steal 15% Health from all enemies and redistribute to all allies. All allies receive an additional 5,000 Health. This bypasses Heal Block.\n\nAlways apply Regeneration for 2 turns to all allies.\nAlways apply Bleed for 2 turns to all enemies.\nApply Deflect to all KREE allies.\n\nThis attack ignores Deathproof and passives that trigger when a character drops below a certain Health."
+        "description": "Steal 15% Health from all enemies and redistribute to all allies + clear Revive Once. This bypasses Heal Block.\n\nApply 2 Bleed for 2 turns to all enemies.\n\nApply 2 Deflect to self and all KREE and OMEN allies + apply 2 Regeneration for 2 turns to self and all allies.\n\nOn WAR OFFENSE, with 3 OMEN allies:\n > Steal an additional 15% Health from all enemies and redistribute to all allies\n > Reduce the duration of all positive effects by 2 on all enemies.\n > This attack gains +500% Extra Focus and is Unavoiadable and cannot be Blocked or Counterattacked."
       },
       "passive": {
         "name": "Kree Nanotech",
-        "description": "On ally Death, fill Speed Bar by 25%.\n\nOn enemy Death, heal the most injured non-summoned ally for 15% of this character's Max Health. If that ally is KREE, also apply a random positive effect."
+        "description": "On Spawn, gain Revive Once. This character will Revive with 60% of this character's Max Health.\n\nOn ally Death, fill Speed Bar by 25%.\n\nOn enemy Death, heal the most injured non-summoned ally for 20% of this character's Max Health. If that ally is KREE or OMEN, also apply a random positive effect.\n\nOn WAR OFFENSE, with 3 other OMEN allies, enemies cannot have their Resistance or Speed increased except by positive effects."
       }
     }
   },
@@ -9920,24 +9931,25 @@
       "COSMIC",
       "MYSTIC",
       "CONTROLLER",
-      "KREE"
+      "KREE",
+      "OMEN"
     ],
     "abilities": {
       "basic": {
         "name": "Hammer Smash",
-        "description": "Clear 2 positive effects from primary target.\nAttack primary target for 180% damage + 25% Piercing.\n\nThis attack is Unavoidable."
+        "description": "Clear 2 positive effects from primary target.\nAttack primary target for 300% damage + 30% Piercing.\n\nThis attack is Unavoidable.\n\nOn WAR OFFENSE, when forced to attack an ally, this character deals less damage to OMEN characters and, if Silver Surfer (Breaker) is an ally, does not reduce the Max Health of that ally."
       },
       "special": {
         "name": "Judgment",
-        "description": "Summon 2 KREE allies at 340% normal Damage and 100% of normal Health. Clear 2 negative effects from all allies.\n<i>Possible Summons:</i> \n> Kree Reaper\n> Kree Noble"
+        "description": "Summon 2 KREE allies.\nPossible Summons: Elite Kree Noble or Elite Kree Reaper.\n\nClear 2 negative effects from self and all allies.\n\nOn WAR OFFENSE:\n > Summoned KREE allies gain 2 Deathproof and Defense Up for 2 turns.\n > Clear all negative effects from self and all OMEN allies."
       },
       "ultimate": {
         "name": "Universal Weapon",
-        "description": "Attack all enemies for 290% damage. Apply Ability Block to the primary target for 2 turns. Apply Ability Block to 2 additional enemies."
+        "description": "Attack all enemies for 400% damage + 30% Piercing.\nApply Ability Block for 2 turns to the primary target and for 1 turn to 2 additional enemies.\n\nOn WAR OFFENSE, with 3 OMEN allies, instead, apply Ability Block for 2 turns to all enemies."
       },
       "passive": {
         "name": "Accuser",
-        "description": "Whenever this character or a KREE ally gains energy, they fill Speed Bar by 20% and are healed for 4,200 Health + 15% of this character's max Health. This effect may be triggered by another passive.\n\n Gain +30% Resist. Apply +30% Resist to KREE allies.\nApply +20% Max Health and +20% Damage to non-summoned KREE MINION allies."
+        "description": "On Spawn, gain Immunity for 2 turns.\n\nIf this character, a KREE ally, or an OMEN ally receives generated Ability Energy, Heal that character for 25% of this character's max Health.\nThis may be triggered by Passives.\n\nOn WAR OFFENSE:\n > On Spawn, apply Immunity for 2 turns to all OMEN allies.\n > While this character's Health is greater or equal to 50%, lower enemy Crit Chance by 50%.\n > With 3 OMEN allies, enemies cannot fill Speed Bar for themselves or allies.\n > Summoned KREE MINION allies gain +50% Max Health and +30% Damage."
       }
     }
   },
@@ -10966,6 +10978,38 @@
       "passive": {
         "name": "The Power Cosmic",
         "description": "On Spawn, gain Defense Up for 3 turns.\nOn any Turn, Heal for 5% of this character's Max Health.\nOn Turn, gain +15% Speed, up to a max of +45% Speed.\nOn non-summoned ally Death, gain Offense Up.\nIf this character has Offense Up, all attacks ignore Defense Up.\n\nGain +50% Resistance, if there are any VILLAIN COSMIC enemies, gain an additional +50% Resistance.\nGain +50% Focus, if this character has 1 or more HERO COSMIC allies, gain an additional +50% Focus and all allies gain +50% Focus.\n\nLower Resistance by 50% for all enemies with Heal Block."
+      }
+    }
+  },
+  {
+    "id": "SilverSurferBreaker",
+    "name": "Silver Surfer (Breaker)",
+    "portrait": "https://assets.marvelstrikeforce.com/imgs/Portrait_SilverSurferBreaker_eebae5b4.png",
+    "traits": [
+      "VILLAIN",
+      "COSMIC",
+      "MYSTIC",
+      "BRAWLER",
+      "OMEN",
+      "LEGENDARY",
+      "TERROR"
+    ],
+    "abilities": {
+      "basic": {
+        "name": "Cosmic Void",
+        "description": "Attack primary target for 350% Piercing.\nAttack all adjacent targets for 320% damage.\n\nFlip 3 positive effects on primary and adjacent targets.\n\nClear all negative effects on self.\n\nIf no enemy has Unstable Singularity, apply Unstable Singularity to 1 random enemy.\n\nWhen forced to attack an ally, this character deals less damage to those allies, does not flip positive effects, and does not reduce the Max Health of that ally."
+      },
+      "special": {
+        "name": "Corrupted Sentinel",
+        "description": "Clear Barrier on all enemies then attack primary target for 440% Piercing + clear Charged and Taunt.\n\nAttack primary and adjacent targets for 400% damage + apply Trauma for 2 turns, Disrupted for 2 turns, and Ability Block for 1 turn.\n\nReduce the duration of all negative effects on this character and each ally by 2, then apply Safeguard for 2 turns and Offense Up for 2 turns to self and all OMEN allies.\n\nIf no enemy has Unstable Singularity, apply Unstable Singularity to 1 random enemy.\n\nThis attack cannot be counterattacked."
+      },
+      "ultimate": {
+        "name": "Extinction Event",
+        "description": "Clear Barrier on all enemies.\nAttack all enemies for 550% Piercing + clear all positive effects on each enemy + apply Heal Block for 2 turns.\n\nApply Speed Up for 2 turns to self and all allies.\n\nIf no enemy has Unstable Singularity, apply Unstable Singularity to 1 random enemy.\n\nThis attack ignores Defense Up, is Unavoidable and cannot be Counterattacked.\n\nOn WAR OFFENSE, with 3 OMEN allies, this attack cannot be Blocked."
+      },
+      "passive": {
+        "name": "Breaker of Worlds",
+        "description": "On Spawn, apply Defense Up for 2 turns and Offense Up for 2 turns to self and all allies.\n\nOn first Turn, lower duration of all negative effects on self by 2 and Heal self and all allies for 20% of this character's Max Health.\n\nThe first time this character drops below 50% Health, Heal self for 50% of Max Health.\nOn WAR OFFENSE, the first time an ally drops below 50% Health, Heal that ally for 25% of this character's Max Health, or if that ally is an OMEN ally, instead, Heal for 50% of this character's Max Health.\n\nWhen an enemy with Unstable Singularity is attacked, attack that enemy for 350% Piercing + apply 2 Bleed for 2 turns + clear all negative effects on self and fill Speed Bar for self by 20%, then clear Unstable Singularity from all enemies. On WAR OFFENSE, this attack includes adjacent targets if the enemy with Unstable Singularity is alive.\n\nUntil this character completes a turn, this character and all allies cannot gain Heal Block and are immune to Speed Bar reduction.\n\nOn WAR OFFENSE, when an ally uses their Ultimate, attack the enemy with the lowest Resistance for 350% Piercing + clear all negative effects on self. If no enemy has Unstable Singularity, apply Unstable Singularity to 1 random enemy."
       }
     }
   },
