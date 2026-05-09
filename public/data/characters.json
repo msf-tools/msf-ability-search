@@ -2517,7 +2517,8 @@
       "SUPPORT",
       "BLACK ORDER",
       "OMEN",
-      "LEGENDARY"
+      "LEGENDARY",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
@@ -9932,7 +9933,8 @@
       "MYSTIC",
       "CONTROLLER",
       "KREE",
-      "OMEN"
+      "OMEN",
+      "TERROR"
     ],
     "abilities": {
       "basic": {
