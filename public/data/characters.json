@@ -5016,11 +5016,11 @@
     "abilities": {
       "basic": {
         "name": "Just a Taste",
-        "description": "Attack primary target for 280% Piercing + apply Disrupted for 2 turns.\n\nGenerate 1 Ultimate Ability Energy for self.\nGenerate 1 Special Ability Energy for a random Gwenpool ally.\n\nWhen forced to attack an ally, this character deals less damage to RETCON characters."
+        "description": "Attack primary target for 280% Piercing + apply Disrupted for 2 turns.\n\nGenerate 1 Ultimate Ability Energy for self.\nGenerate 1 Special Ability Energy for all RETCON allies.\n\nWhen forced to attack an ally, this character deals less damage to RETCON characters."
       },
       "special": {
         "name": "Sharknado",
-        "description": "Clear all Barrier from all enemies.\n\nPull all enemies up to 2 spaces toward the primary target + reduce the duration of all positive effects by 2.\nAttack all enemies for 360% Piercing + apply Disrupted for 2 turns, Defense Down for 2 turns, and Silence for 2 turns.\n\nOn WAR DEFENSE or in BATTLEWORLD:\n > On Kill, Bonus Attack all enemies for 360% Piercing.\n\nGain +1,000% Extra Focus for this attack.\nThis attack cannot be dodged."
+        "description": "Clear all Barrier from all enemies.\n\nPull all enemies up to 2 spaces toward the primary target + reduce the duration of all positive effects by 2.\nAttack all enemies for 360% Piercing + apply Disrupted for 2 turns, Defense Down for 2 turns, and Silence for 2 turns.\n\nOn WAR DEFENSE or in BATTLEWORLD:\n > On Kill, Bonus Attack all enemies for 360% Piercing.\n\nGain +1,000% Extra Focus for this attack.\n\nFlip 2 negative effects into positive effects on a random Gwenpool ally.\nThis attack cannot be dodged."
       },
       "ultimate": {
         "name": "Deep Dive",
@@ -5028,7 +5028,7 @@
       },
       "passive": {
         "name": "Cute Carcharodon",
-        "description": "When an enemy uses their Ultimate Ability, apply Time Warp to self or 1 random RETCON ally that does not have Time Warp.\n\nOn enemy Death, attack the most injured enemy SUPPORT for 250% Piercing.\n\nOn WAR DEFENSE or in BATTLEWORLD, if this character has 4 RETCON allies:\n > On Spawn, if this character does not have Exhausted, apply Slow to all enemies. Gain +500% Focus for this action.\n >  Until this character completes a turn, enemies cannot gain Immunity or Speed Up.\n > Enemies cannot have their Speed increased except by positive effects.\n > Non-Boss enemies that normally cannot gain Slow can now gain Slow.\n > Allies with Time Warp, gain +616% Speed.\n\nTime Warp:\n > On Turn, attack a random enemy with the attacker's Ultimate Ability at level 7. This does not use the attacker's Ultimate Ability Energy.\n > Lose Time Warp."
+        "description": "When an enemy uses their Ultimate Ability, apply Time Warp to self or 1 random RETCON ally that does not have Time Warp.\n\nOn enemy Death, attack the most injured enemy SUPPORT for 250% Piercing. On WAR DEFENSE or BATTLEWORLD, attack the most injured enemy instead.\n\nOn WAR DEFENSE or in BATTLEWORLD, if this character has 4 RETCON allies:\n > On Spawn, if this character does not have Exhausted, apply Slow to all enemies. Gain +500% Focus for this action.\n >  Until this character completes a turn, enemies cannot gain Immunity or Speed Up.\n > Enemies cannot have their Speed increased except by positive effects.\n > Non-Boss enemies that normally cannot gain Slow can now gain Slow.\n > Allies with Time Warp, gain +616% Speed.\n > On Turn, if this character does not have Exhausted, apply Time Warp to 1 random RETCON ally that does not have Time Warp.\n\nTime Warp:\n > On Turn, attack a random enemy with the attacker's Ultimate Ability at level 7. This does not use the attacker's Ultimate Ability Energy.\n > Lose Time Warp."
       }
     }
   },
