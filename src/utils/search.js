@@ -1,22 +1,27 @@
 import Fuse from 'fuse.js';
 
+export const ABILITY_TYPES = ['passive', 'basic', 'special', 'ultimate'];
+
 // Build a searchable index from character data
 export function buildSearchIndex(characters) {
   // Create a flattened structure for ability searching
   const abilityEntries = [];
 
   characters.forEach((char) => {
-    ['basic', 'special', 'ultimate', 'passive'].forEach((type) => {
+    ABILITY_TYPES.forEach((type) => {
       const ability = char.abilities[type];
       if (ability) {
+        const abilityName = ability.name || '';
+        const abilityDescription = ability.description || '';
         abilityEntries.push({
           characterId: char.id,
           characterName: char.name,
           portrait: char.portrait,
           traits: char.traits,
           abilityType: type,
-          abilityName: ability.name,
-          abilityDescription: ability.description,
+          abilityName,
+          abilityDescription,
+          abilitySearchText: buildConceptText(abilityName, abilityDescription, type),
         });
       }
     });
@@ -29,11 +34,13 @@ export function buildSearchIndex(characters) {
 export function createAbilityFuse(abilityEntries) {
   return new Fuse(abilityEntries, {
     keys: [
-      { name: 'abilityDescription', weight: 0.6 },
-      { name: 'abilityName', weight: 0.4 },
+      { name: 'abilitySearchText', weight: 0.45 },
+      { name: 'abilityDescription', weight: 0.35 },
+      { name: 'abilityName', weight: 0.2 },
     ],
     includeMatches: true,
-    threshold: 0.3,
+    includeScore: true,
+    threshold: 0.36,
     ignoreLocation: true,
     minMatchCharLength: 2,
   });
@@ -95,6 +102,18 @@ export function searchAbilities(abilityFuse, query) {
   return Array.from(grouped.values());
 }
 
+export function sortSearchResults(results) {
+  return [...results].sort((a, b) => {
+    const aPassive = a.matchedAbilities.some((ability) => ability.type === 'passive') ? 0 : 1;
+    const bPassive = b.matchedAbilities.some((ability) => ability.type === 'passive') ? 0 : 1;
+    if (aPassive !== bPassive) return aPassive - bPassive;
+
+    const aScore = Math.min(...a.matchedAbilities.map((ability) => ability.score ?? 1));
+    const bScore = Math.min(...b.matchedAbilities.map((ability) => ability.score ?? 1));
+    return aScore - bScore;
+  });
+}
+
 // Filter characters by name/trait filters
 export function filterCharacters(characters, filterText) {
   if (!filterText || filterText.trim().length < 2) return characters;
@@ -140,7 +159,11 @@ export function highlightText(text, query) {
 
 // Related keyword mapping for common MSF terms
 const KEYWORD_ALIASES = {
-  speed: ['speed up', 'speed down', 'speed bar', 'slow', 'speed'],
+  speed: ['speed up', 'speed down', 'speed bar', 'speed meter', 'turn meter', 'slow', 'speed'],
+  'speed stat': ['speed up', 'speed down', 'speed', 'slow'],
+  'speed bar': ['speed bar', 'speed meter', 'turn meter', 'reduce speed bar', 'fill speed bar'],
+  'turn meter': ['speed bar', 'speed meter', 'turn meter'],
+  slow: ['slow', 'speed down'],
   heal: ['heal', 'regeneration', 'heal block', 'health'],
   stun: ['stun', 'stunned'],
   blind: ['blind', 'miss'],
@@ -158,21 +181,86 @@ const KEYWORD_ALIASES = {
   disrupt: ['disrupt', 'disrupted'],
   deathproof: ['deathproof', 'death proof'],
   revive: ['revive', 'resurrect'],
-  debuff: ['negative effect', 'debuff'],
-  buff: ['positive effect', 'buff'],
-  cleanse: ['clear', 'remove', 'cleanse'],
-  flip: ['flip'],
+  debuff: ['negative effect', 'negative effects', 'debuff', 'debuffs'],
+  buff: ['positive effect', 'positive effects', 'buff', 'buffs'],
+  cleanse: ['clear negative effects', 'clear', 'remove negative effects', 'cleanse'],
+  strip: ['clear positive effects', 'remove positive effects', 'remove positive effect'],
+  flip: ['flip positive effects', 'flip negative effects', 'flip'],
   safeguard: ['safeguard'],
+  'prevent safeguard': ['prevent safeguard', 'clear safeguard', 'remove safeguard', 'cannot gain safeguard'],
   trauma: ['trauma'],
   burn: ['burn'],
-  prevent: ['prevent', 'immune'],
+  prevent: ['prevent', 'prevented', 'immune', 'cannot gain'],
+  spawn: ['on spawn', 'spawn', 'when this character spawns'],
+  immunity: ['immunity', 'immune', 'spawn immunity', 'on spawn immunity'],
+  war: ['war', 'alliance war', 'war offense', 'war defense'],
+  crucible: ['crucible', 'cosmic crucible'],
 };
 
 export function expandQuery(query) {
   const lower = query.toLowerCase().trim();
-  const aliases = KEYWORD_ALIASES[lower];
-  if (aliases) {
-    return aliases;
+  const terms = new Set([lower]);
+
+  Object.entries(KEYWORD_ALIASES).forEach(([keyword, aliases]) => {
+    if (lower.includes(keyword)) {
+      aliases.forEach((alias) => terms.add(alias));
+    }
+  });
+
+  lower
+    .split(/\s+/)
+    .filter((word) => word.length >= 2)
+    .forEach((word) => {
+      if (lower.includes('prevent') && word === 'safeguard') return;
+      const aliases = KEYWORD_ALIASES[word];
+      if (aliases) {
+        aliases.forEach((alias) => terms.add(alias));
+      }
+    });
+
+  return Array.from(terms);
+}
+
+function buildConceptText(name, description, type) {
+  const text = `${name} ${description}`.toLowerCase();
+  const concepts = [type];
+
+  if (/speed bar|speed meter|turn meter/.test(text)) {
+    concepts.push('speed bar', 'turn meter', 'speed manipulation');
   }
-  return [lower];
+  if (/speed up|speed down|slow/.test(text)) {
+    concepts.push('speed stat', 'speed manipulation');
+  }
+  if (/on spawn|when this character spawns|spawn with/.test(text)) {
+    concepts.push('spawn', 'opening effect');
+  }
+  if (/immunity|immune/.test(text)) {
+    concepts.push('immunity', 'spawn immunity');
+  }
+  if (/safeguard/.test(text)) {
+    concepts.push('safeguard');
+  }
+  if (/safeguard/.test(text) && /clear|remove|prevent|cannot gain/.test(text)) {
+    concepts.push('prevent safeguard', 'remove safeguard');
+  }
+  if (/positive effect|positive effects|buff/.test(text)) {
+    concepts.push('buff', 'positive effect');
+  }
+  if (/negative effect|negative effects|debuff/.test(text)) {
+    concepts.push('debuff', 'negative effect');
+  }
+  if (/clear|remove/.test(text) && /positive effect|safeguard/.test(text)) {
+    concepts.push('strip', 'remove positive effects');
+  }
+  if (/clear|remove/.test(text) && /negative effect/.test(text)) {
+    concepts.push('cleanse', 'clear negative effects');
+  }
+  if (/war/.test(text)) {
+    concepts.push('war', 'alliance war');
+  }
+  if (/crucible/.test(text)) {
+    concepts.push('crucible', 'cosmic crucible');
+  }
+
+  return `${name} ${description} ${concepts.join(' ')}`;
 }

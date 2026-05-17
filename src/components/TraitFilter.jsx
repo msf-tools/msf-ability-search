@@ -12,10 +12,10 @@ export default function TraitFilter({ characters, selectedTraits, onTraitsChange
     });
 
     // Group traits by category
-    const origins = ['Bio', 'Mystic', 'Mutant', 'Skill', 'Tech'];
-    const roles = ['Blaster', 'Brawler', 'Controller', 'Protector', 'Support'];
-    const alignments = ['Hero', 'Villain'];
-    const locations = ['Global', 'Cosmic', 'City'];
+    const origins = ['BIO', 'MYSTIC', 'MUTANT', 'SKILL', 'TECH'];
+    const roles = ['BLASTER', 'BRAWLER', 'CONTROLLER', 'PROTECTOR', 'SUPPORT'];
+    const alignments = ['HERO', 'VILLAIN'];
+    const locations = ['GLOBAL', 'COSMIC', 'CITY'];
 
     const categorized = {
       Origin: origins.filter((t) => traitCounts.has(t)),
@@ -95,7 +95,7 @@ export default function TraitFilter({ characters, selectedTraits, onTraitsChange
                     className={`trait-chip ${selectedTraits.includes(trait) ? 'active' : ''}`}
                     onClick={() => toggleTrait(trait)}
                   >
-                    {trait}
+                    {formatTraitLabel(trait)}
                     <span className="trait-chip-count">{traitGroups.counts.get(trait)}</span>
                   </button>
                 ))}
@@ -106,4 +106,11 @@ export default function TraitFilter({ characters, selectedTraits, onTraitsChange
       )}
     </div>
   );
+}
+
+function formatTraitLabel(trait) {
+  if (trait.includes('.') || trait.includes('-')) return trait;
+  return trait
+    .toLowerCase()
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }

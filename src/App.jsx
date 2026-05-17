@@ -2,16 +2,25 @@ import { useState, useMemo } from 'react';
 import { useCharacterData, useSearch } from './hooks/useCharacterData';
 import SearchBar from './components/SearchBar';
 import TraitFilter from './components/TraitFilter';
+import AbilityTypeFilter from './components/AbilityTypeFilter';
 import CharacterCard from './components/CharacterCard';
 import './App.css';
 
 function App() {
-  const { characters, abilityFuse, loading, error } = useCharacterData();
+  const { characters, meta, abilityFuse, loading, error } = useCharacterData();
   const [abilityQuery, setAbilityQuery] = useState('');
   const [filterText, setFilterText] = useState('');
   const [traitFilters, setTraitFilters] = useState([]);
+  const [abilityTypeFilters, setAbilityTypeFilters] = useState([]);
 
-  const results = useSearch(characters, abilityFuse, abilityQuery, filterText, traitFilters);
+  const results = useSearch(
+    characters,
+    abilityFuse,
+    abilityQuery,
+    filterText,
+    traitFilters,
+    abilityTypeFilters
+  );
 
   // Build a lookup for full ability data
   const characterMap = useMemo(() => {
@@ -20,7 +29,14 @@ function App() {
     return map;
   }, [characters]);
 
-  const hasActiveSearch = abilityQuery.trim().length >= 2 || filterText.trim().length >= 2 || traitFilters.length > 0;
+  const hasActiveSearch = abilityQuery.trim().length >= 2 ||
+    filterText.trim().length >= 2 ||
+    traitFilters.length > 0 ||
+    abilityTypeFilters.length > 0;
+
+  const updatedAt = meta?.lastUpdated
+    ? new Intl.DateTimeFormat(undefined, { month: 'short', day: 'numeric', year: 'numeric' }).format(new Date(meta.lastUpdated))
+    : null;
 
   return (
     <div className="app">
@@ -29,6 +45,9 @@ function App() {
           <span className="title-msf">MSF</span> Ability Search
         </h1>
         <p className="app-subtitle">Find characters by their abilities, traits, and keywords</p>
+        {updatedAt && (
+          <p className="app-meta">{characters.length} characters · Updated {updatedAt}</p>
+        )}
       </header>
 
       <main className="app-main">
@@ -43,6 +62,11 @@ function App() {
           characters={characters}
           selectedTraits={traitFilters}
           onTraitsChange={setTraitFilters}
+        />
+
+        <AbilityTypeFilter
+          selectedTypes={abilityTypeFilters}
+          onTypesChange={setAbilityTypeFilters}
         />
 
         {loading && (

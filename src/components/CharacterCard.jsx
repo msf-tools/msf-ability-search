@@ -32,11 +32,21 @@ function HighlightedText({ text, query }) {
 
 function AbilityCard({ ability, query, isPassive, defaultExpanded }) {
   const [expanded, setExpanded] = useState(defaultExpanded);
+  const toggleExpanded = () => setExpanded(!expanded);
 
   return (
     <div
       className={`ability-card ${isPassive ? 'passive' : ''} ${expanded ? 'expanded' : ''}`}
-      onClick={() => setExpanded(!expanded)}
+      onClick={toggleExpanded}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleExpanded();
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-expanded={expanded}
     >
       <div className="ability-header">
         <span

@@ -5,7 +5,9 @@ A mobile-optimized web app for searching Marvel Strike Force character abilities
 ## Features
 
 - **Fuzzy ability search** — Find characters whose abilities mention keywords like "speed down", "prevent", "heal block"
+- **Concept-aware search** — Search broader phrases like "speed bar", "spawn immunity", or "prevent safeguard"
 - **Character/trait filtering** — Filter by character name, team, origin, role, or alignment
+- **Ability-type filtering** — Narrow results to passive, basic, special, or ultimate abilities
 - **Keyword highlighting** — Matching portions of ability text are highlighted in results
 - **Passive-first results** — Passive abilities are prioritized since they're always active
 - **Expandable ability cards** — Focus on matched abilities with option to view all four
@@ -25,7 +27,7 @@ Character data is fetched from the [MSF API](https://developer.marvelstrikeforce
 To fetch data locally:
 
 ```bash
-MSF_API_KEY=your_key MSF_ACCESS_TOKEN=your_token npm run fetch-data
+MSF_API_KEY=your_key MSF_CLIENT_ID=your_client_id MSF_CLIENT_SECRET=your_client_secret npm run fetch-data
 ```
 
 ### GitHub Secrets Required
@@ -33,7 +35,8 @@ MSF_API_KEY=your_key MSF_ACCESS_TOKEN=your_token npm run fetch-data
 | Secret | Description |
 |--------|-------------|
 | `MSF_API_KEY` | Your API key from the MSF developer portal |
-| `MSF_ACCESS_TOKEN` | OAuth2 bearer token for the MSF API |
+| `MSF_CLIENT_ID` | OAuth2 client ID for a backend/M2M app |
+| `MSF_CLIENT_SECRET` | OAuth2 client secret for that backend/M2M app |
 
 ## Deployment
 

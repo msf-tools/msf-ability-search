@@ -31,14 +31,16 @@ const OUTPUT_DIR = join(__dirname, '..', 'public', 'data');
 const BASE_URL = 'https://api.marvelstrikeforce.com';
 const TOKEN_URL = 'https://hydra-public.prod.m3.scopelypv.com/oauth2/token';
 
-// Public beta API key — override with MSF_API_KEY env var if needed
-const API_KEY = process.env.MSF_API_KEY || '17wMKJLRxy3pYDCKG5ciP7VSU45OVumB2biCzzgw';
-
-// Client ID from the MSF developer portal M2M app registration
-const CLIENT_ID = process.env.MSF_CLIENT_ID || 'e69a9dbb-1de7-45f2-9dcd-9d5aceb63f0c';
-
-// Client secret — only available for M2M/backend app types, not required for SPA public clients
+const API_KEY = process.env.MSF_API_KEY;
+const CLIENT_ID = process.env.MSF_CLIENT_ID;
 const CLIENT_SECRET = process.env.MSF_CLIENT_SECRET;
+
+function requireEnv(name, value) {
+  if (!value) {
+    throw new Error(`Missing required environment variable: ${name}`);
+  }
+  return value;
+}
 
 async function fetchAccessToken() {
   console.log('Fetching OAuth2 access token (client credentials)...');
@@ -46,7 +48,9 @@ async function fetchAccessToken() {
   const body = new URLSearchParams({ grant_type: 'client_credentials' });
 
   // Use client_secret_basic: credentials in Authorization header as Base64
-  const credentials = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64');
+  const credentials = Buffer.from(
+    `${requireEnv('MSF_CLIENT_ID', CLIENT_ID)}:${requireEnv('MSF_CLIENT_SECRET', CLIENT_SECRET)}`
+  ).toString('base64');
 
   const res = await fetch(TOKEN_URL, {
     method: 'POST',
@@ -73,7 +77,7 @@ async function fetchAccessToken() {
 
 function makeHeaders(accessToken) {
   return {
-    'x-api-key': API_KEY,
+    'x-api-key': requireEnv('MSF_API_KEY', API_KEY),
     Authorization: `Bearer ${accessToken}`,
     'User-Agent': 'MSFAbilitySearch/1.0 (Server)',
     Accept: 'application/json',

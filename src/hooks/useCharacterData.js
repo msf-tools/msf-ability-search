@@ -1,19 +1,33 @@
 import { useState, useEffect, useMemo } from 'react';
-import { buildSearchIndex, createAbilityFuse, searchAbilities, filterCharacters, expandQuery } from '../utils/search';
+import {
+  ABILITY_TYPES,
+  buildSearchIndex,
+  createAbilityFuse,
+  searchAbilities,
+  filterCharacters,
+  expandQuery,
+  sortSearchResults,
+} from '../utils/search';
 
 export function useCharacterData() {
   const [characters, setCharacters] = useState([]);
+  const [meta, setMeta] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/characters.json`)
-      .then((res) => {
+    const dataBase = `${import.meta.env.BASE_URL}data`;
+
+    Promise.all([
+      fetch(`${dataBase}/characters.json`).then((res) => {
         if (!res.ok) throw new Error('Failed to load character data');
         return res.json();
-      })
-      .then((data) => {
+      }),
+      fetch(`${dataBase}/meta.json`).then((res) => (res.ok ? res.json() : null)),
+    ])
+      .then(([data, metaData]) => {
         setCharacters(data);
+        setMeta(metaData);
         setLoading(false);
       })
       .catch((err) => {
@@ -25,10 +39,10 @@ export function useCharacterData() {
   const abilityEntries = useMemo(() => buildSearchIndex(characters), [characters]);
   const abilityFuse = useMemo(() => createAbilityFuse(abilityEntries), [abilityEntries]);
 
-  return { characters, abilityFuse, loading, error };
+  return { characters, meta, abilityFuse, loading, error };
 }
 
-export function useSearch(characters, abilityFuse, abilityQuery, filterText, traitFilters) {
+export function useSearch(characters, abilityFuse, abilityQuery, filterText, traitFilters, abilityTypeFilters) {
   return useMemo(() => {
     if (!characters.length) return [];
 
@@ -47,6 +61,8 @@ export function useSearch(characters, abilityFuse, abilityQuery, filterText, tra
     }
 
     const filteredIds = new Set(filteredChars.map((c) => c.id));
+    const selectedAbilityTypes = abilityTypeFilters?.length ? abilityTypeFilters : ABILITY_TYPES;
+    const selectedTypeSet = new Set(selectedAbilityTypes);
 
     // If there's an ability query, search abilities and intersect with filtered chars
     if (abilityQuery && abilityQuery.trim().length >= 2) {
@@ -57,12 +73,20 @@ export function useSearch(characters, abilityFuse, abilityQuery, filterText, tra
         const results = searchAbilities(abilityFuse, term);
         results.forEach((result) => {
           if (filteredIds.has(result.character.id)) {
+            const matchedAbilities = result.matchedAbilities.filter((ability) =>
+              selectedTypeSet.has(ability.type)
+            );
+            if (matchedAbilities.length === 0) return;
+
             if (!allResults.has(result.character.id)) {
-              allResults.set(result.character.id, result);
+              allResults.set(result.character.id, {
+                ...result,
+                matchedAbilities,
+              });
             } else {
               // Merge abilities
               const existing = allResults.get(result.character.id);
-              result.matchedAbilities.forEach((ability) => {
+              matchedAbilities.forEach((ability) => {
                 const exists = existing.matchedAbilities.some(
                   (a) => a.type === ability.type
                 );
@@ -75,7 +99,7 @@ export function useSearch(characters, abilityFuse, abilityQuery, filterText, tra
         });
       });
 
-      return Array.from(allResults.values());
+      return sortSearchResults(Array.from(allResults.values()));
     }
 
     // No ability query — return all filtered characters with all abilities
@@ -86,7 +110,7 @@ export function useSearch(characters, abilityFuse, abilityQuery, filterText, tra
         portrait: char.portrait,
         traits: char.traits,
       },
-      matchedAbilities: ['passive', 'basic', 'special', 'ultimate']
+      matchedAbilities: selectedAbilityTypes
         .filter((type) => char.abilities[type])
         .map((type) => ({
           type,
@@ -95,6 +119,6 @@ export function useSearch(characters, abilityFuse, abilityQuery, filterText, tra
           matches: [],
           score: 0,
         })),
-    }));
-  }, [characters, abilityFuse, abilityQuery, filterText, traitFilters]);
+    })).filter((result) => result.matchedAbilities.length > 0);
+  }, [characters, abilityFuse, abilityQuery, filterText, traitFilters, abilityTypeFilters]);
 }

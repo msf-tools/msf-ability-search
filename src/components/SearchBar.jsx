@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
 
 const ABILITY_SUGGESTIONS = [
-  'speed down', 'speed up', 'stun', 'blind', 'heal block', 'ability block',
-  'offense up', 'defense up', 'stealth', 'taunt', 'evade', 'counter',
-  'bleed', 'regeneration', 'disrupt', 'immunity', 'deathproof', 'safeguard',
-  'revive', 'trauma', 'burn', 'slow', 'deflect', 'charged', 'assist',
-  'ability energy', 'positive effect', 'negative effect', 'prevent',
-  'speed bar', 'block amount', 'flip',
+  'speed bar', 'speed stat', 'speed down', 'speed up', 'spawn immunity',
+  'prevent safeguard', 'remove positive effects', 'clear negative effects',
+  'stun', 'blind', 'heal block', 'ability block', 'offense up', 'defense up',
+  'stealth', 'taunt', 'evade', 'counter', 'bleed', 'regeneration', 'disrupt',
+  'immunity', 'deathproof', 'safeguard', 'revive', 'trauma', 'burn', 'slow',
+  'deflect', 'charged', 'assist', 'ability energy', 'positive effect',
+  'negative effect', 'prevent', 'block amount', 'flip', 'crucible', 'war',
 ];
 
 export default function SearchBar({ abilityQuery, onAbilityQueryChange, filterText, onFilterTextChange }) {
